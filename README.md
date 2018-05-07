@@ -46,7 +46,7 @@ RAS is probably the most common orientation for Neuroimaging research. An altern
 
 There are 48 (!) possible combinations of orientations. BioImage Suite Web can display all of these (at least as far as we have tested) but also provides the user with the option of converting images `on-load` to RAS or LPS to standardize. Under the Help menu if you select the option `Set Image Orientation on Load` the following GUI appears.
 
-![Image Orientation on Load](images/setorientationonload.png | width=50)
+![Image Orientation on Load](images/setorientationonload.png&s=200)
 
 If you select either RAS or LPS then any image load will be repermuted to be in RAS or LPS orientation on load. The settings are stored either in the Browser Database or the text file ${HOME}/.bisweb for commandline and Desktop applications. This is a JSON key-value database file that may look something likes this:
 
