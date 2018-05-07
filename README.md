@@ -8,5 +8,5 @@ you are looking for developer documentation, this may be found in
 [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/tree/master/doc). 
 
 To begin reading the user documentation
-[open the README file](docs/README.md). _This is work in progress._
+[open the intro file](docs/README.md). _This is work in progress._
 
