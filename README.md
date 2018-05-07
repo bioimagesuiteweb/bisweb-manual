@@ -2,7 +2,7 @@
 
 ## Table Of Contents
 
-* [Starting BioImage Suite Web](#Starting_BioImage_Suite_Web) -- how to get and run the software.
+* [Starting BioImage Suite Web](#starting_bioimage_suite_web) -- how to get and run the software.
 * [Some Key Information](#Some_Key_Information) -- information about configuring your browser and default image orientations.
 * [The Orthogonal Viewer Application](#The_Orthogonal_Viewer_Application) -- the "first" application with an explanation of how the viewers work (including colormapping etc.)
 * [The Overlay Viewer Application](#The_Overlay_Viewer_Application) -- an application optimized for displaying functional overlays.
