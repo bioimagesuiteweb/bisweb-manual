@@ -1,14 +1,23 @@
 # BioImage Suite Web User Documentation
 
+## Table Of Contents
+
+* [Starting BioImage Suite Web](#Starting_BioImage_Suite_Web) -- how to get and run the software.
+* [Some Key Information](#Some_Key_Information) -- information about configuring your browser and default image orientations.
+* [The Orthogonal Viewer Application](#The_Orthogonal_Viewer_Application) -- the "first" application with an explanation of how the viewers work (including colormapping etc.)
+* [The Overlay Viewer Application](#The_Overlay_Viewer_Application) -- an application optimized for displaying functional overlays.
+
 __Note:__ This document and those linked to it contain the beginnings of the user documentation for [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief introduction to the software can be found in this [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If you are looking for developer documentation, this may be found in [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/tree/master/doc). _This is work in progress._
+
+---
+
+### Starting BioImage Suite Web
 
 BioImage Suite Web consists of three major components
 
 * [The web applications](https://bioimagesuiteweb.github.io/webapp/) which directly run in your browser with no installation required.
 * Desktop applications using [Electron](https://electronjs.org/) which may be downloaded from our [download page](http://bisweb.yale.edu/binaries/binaries.html)
 * Command line applications which may also be downloaded [from our download page](http://bisweb.yale.edu/binaries/binaries.html). This require a recent version of [Node.js](https://nodejs.org/en/). We recommend v 8.9 or later (but not 9 or 10).
-
-When you open the main BioImage Suite Web web page (or the main electron application) you will see the main page
 
 ![Introduction Page](images/welcome.png)
 
@@ -18,7 +27,7 @@ From the menu you can also navigate to the downloads page, the documentation and
 
 ---
 
-## Before you Begin
+## Some Key Information
 
 ### Download File Location
 
@@ -116,7 +125,7 @@ All viewers can display overlays. The `Overlay Viewer` is particularly optimized
 
 This is a dual viewer that shows functional overlays in both an `Orthogonal` (three orthogonal slice viewer shown above) and a `Mosaic` (multiple parallel slices -- see below) viewer which are synchronized to have the same color mapping scheme.
 
-To try this out, open the application from the main BioImage Suite web page (under `Applications| Overlay Viewer`) and then under `Help`, select `Load Sample Data`. This will load a sample anatomical/functional image pair. As discussed above, once an overlay image is loaded, the `Viewer Controls` have an additional set of controls labeled `Overlay Color Mapping` (shown on the right). The controls here perform the following tasks:
+To try this out, open the application from the main BioImage Suite web page (under `Applications| Overlay Viewer`) and then under `Help`, select `Load Sample Data`. This will load a sample anatomical/functional image pair. (You may load your own images using `Image|Load Image` and `Overlay|Load Overlay`. As discussed above, once an overlay image is loaded, the `Viewer Controls` have an additional set of controls labeled `Overlay Color Mapping` (shown on the right). The controls here perform the following tasks:
 
 * `Opacity` - the relative opacity for 0 (completely transparent) to 1 (fully opaque). Use this to partially show the anatomy under the functional map if desired.
 * `Overlay Type` -- the overlay can be displayed using a number of different color maps. These are
