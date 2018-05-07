@@ -5,7 +5,7 @@
 * [Starting BioImage Suite Web](#starting_bioimage_suite_web) -- how to get and run the software.
 * [Some Key Information](#Some_Key_Information) -- information about configuring your browser and default image orientations.
 * [The Orthogonal Viewer Application](#The_Orthogonal_Viewer_Application) -- the "first" application with an explanation of how the viewers work (including colormapping etc.)
-* [The Overlay Viewer Application](#The_Overlay_Viewer_Application) -- an application optimized for displaying functional overlays.
+* [The Overlay Viewer Application](#the_overlay_viewer_application) -- an application optimized for displaying functional overlays.
 
 __Note:__ This document and those linked to it contain the beginnings of the user documentation for [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief introduction to the software can be found in this [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If you are looking for developer documentation, this may be found in [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/tree/master/doc). _This is work in progress._
 
