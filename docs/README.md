@@ -1,5 +1,3 @@
-# BioImage Suite Web User Documentation
-
 ## Table Of Contents
 
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) -- how to get and run the software.
