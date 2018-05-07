@@ -16,6 +16,8 @@ BioImage Suite Web consists of a collection of applications (which is likely to 
 
 From the menu you can also navigate to the downloads page, the documentation and the source code repository.
 
+---
+
 ## Before you Begin
 
 ### Download File Location
@@ -51,3 +53,19 @@ If you select either RAS or LPS then any image load will be repermuted to be in 
 ![The Settings File](images/settings.png)
 
 In this case "orientationOnLoad" is set to "None" which preserves the image orientation as is.
+
+---
+
+## An example application
+
+All BioImage Suite web applications share components and have a similar user interface. The picture below shows the `Orthogonal Viewer Tool`.
+
+![An Application ](images/viewer.png)
+
+The application consists of the following parts:
+
+A. The Menu Bar
+B. The Viewer (one application has two viewers)
+C. The image information under the cursor.
+D. The side panel containing viewer controls. (The `_` button at the top right of this minimizes this side panel)
+E. The `Viewer Controls` which allow the user to control how the image is displayed. From this one can toggle color mapping  
