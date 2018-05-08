@@ -18,7 +18,7 @@ BioImage Suite Web consists of three major components
 
 * [The web applications](https://bioimagesuiteweb.github.io/webapp/) which directly run in your browser with no installation required.
 * Desktop applications using [Electron](https://electronjs.org/) which may be downloaded from our [download page](http://bisweb.yale.edu/binaries/binaries.html)
-* Command line applications which may also be downloaded [from our download page](http://bisweb.yale.edu/binaries/binaries.html). This require a recent version of [Node.js](https://nodejs.org/en/). We recommend v 8.9 or later (but not 9 or 10).
+* [Command line applications](CommandLineTools.md) which may also be downloaded [from our download page](http://bisweb.yale.edu/binaries/binaries.html). This require a recent version of [Node.js](https://nodejs.org/en/). We recommend v 8.9 or later (but not 9 or 10).
 
 ![Introduction Page](images/welcome.png)
 This is the main page at [https://bioimagesuiteweb.github.io/webapp/](https://bioimagesuiteweb.github.io/webapp/)
