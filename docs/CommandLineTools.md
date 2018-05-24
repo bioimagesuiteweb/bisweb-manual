@@ -2,20 +2,20 @@
 
 ### Introduction
 
-In addition to [web-based applications](https://bioimagesuiteweb.github.io/webapp/) and desktop applications, BioImage Suite Web modules can also be accessed as command line applications. This is useful for batch-style processing. You may download the command line tools from [our download webpage](http://bisweb.yale.edu/binaries/binaries.html). The download is a single multiplatform package (works on MacOS, MS-Windows and Ubuntu Linux). The only dependency is Node.js vs 8.x (i.e. the latest version of version 8) which can be obtained from [the Node.js download site](https://nodejs.org/en/).
+In addition to [web-based applications](https://bioimagesuiteweb.github.io/webapp/) and desktop applications, BioImage Suite Web modules can be accessed as command line applications. This is useful for batch-style processing. You may download the command line tools from [our download webpage](http://bisweb.yale.edu/binaries/binaries.html). The download is a single multiplatform package (works on MacOS, MS-Windows and Ubuntu Linux). The only dependency is Node.js vs 8.x (i.e. the latest version of version 8) which can be found on [the Node.js download site](https://nodejs.org/en/).
 
-_Note:_ A modern web browser consists of (roughly speaking) two parts: (i) the web page rendering engine and (ii) the JavaScript engine. Node.js is based on V8, the JavaScript engine that is part of Google Chrome. The command line tools in BioImage Suite Web share the JavaScript code that the same tools use in web applications other than for small changes to allow for File I/O.
+_Note:_ Roughly speaking, a modern web browser consists of two parts: (i) the web page rendering engine and (ii) the JavaScript engine. Node.js is based on [V8](https://developers.google.com/v8/), the JavaScript engine in Google Chrome. 
 
 ### Installing
 
-There is very little needed. First download the compressed file and extract it in some directory. On Unix this might be /usr/local/bisweb but really any directory will work. As with all tools of a "Unix-y" heritage, it is best to not use folder names with spaces in them.
+There is very little needed. First, download the compressed file and extract it to a folder of your choice. On Unix this might be `/usr/local/bisweb` but any directory will work. As with all tools of a Unix-y heritage, it is best to not use folder names with spaces in them.
 
 Once the files are uncrompressed, a quick `ls` inside the folder will reveal the following contents.
 
     bin  LICENSE        setpaths.bat  setpaths.sh
     lib  README_js.txt  setpaths.csh  winbin
 
-The actual tools are in the `lib` directory and consist of the JavaScript bundle file `bisweb.js` and the Web-Assembly library `libbiswasm.wasm`. These two files are technically all you need. The rest of the files are there to simplify calling these.
+The actual tools are in the `lib` directory and consist of the JavaScript bundle file `bisweb.js` and the Web-Assembly library `libbiswasm.wasm`. These two files are technically all you need: the rest of the files are there to simplify calling these.
 
 ### Using on Unix/MacOS
 
@@ -23,14 +23,13 @@ The first step is to add the tools to your path. You can do this by typing
 
     source /usr/local/bisweb/setpaths.sh
 
-__Replace /usr/local/bisweb__ with the location where you extracted the files. If you use the csh/tcsh shells replace `setpaths.sh` with `setpaths.csh`
+Replace '/usr/local/bisweb' with the location where you extracted the files if necessary. If you use the csh/tcsh shells replace `setpaths.sh` with `setpaths.csh`. This will add the scripts to your path. 
 
-This adds the scripts to your path.  As an example to run the smooth image
-script (and get its help page) type:
+As an example, to run the smooth image script and get its help page type:
 
    bw_smoothImage -h
 
-This results in an output of the form:
+This produces the following:
 
     ....
     .... Using node.js version 8.9.4 (OK)
@@ -57,13 +56,12 @@ This results in an output of the form:
         --silent            Run in silent mode (no output on the console)
         -h, --help          output usage information
 
-The first few lines (starting with '....' or ',,,,') describe the environment and then, we see the options.
 
-There are over 30 such tools in the `bin` directory, take a look around. These tools exactly mirror tools that are available in the GUI:
+There are over 30 such tools in the `bin` directory that mirror the modules available in the web application.
 
 ![Command Line vs Web Applications](images/cmdlinevsweb.png)
 
-Here is a side-by-side view of the command line version of the linear registration  tool and the graphical-user interface version in a Web Application. Other than for the code for specifying inputs, parameters and handling the output files, the rest of the code is _identifical_ between the two versions. See 
+Here is a side-by-side view of the command line version of the linear registration  tool and the graphical-user interface version in a Web Application. Other than for the code for specifying inputs, parameters and handling the output files, the rest of the code is _identical_ between the two versions.
 
 
 __Note:__ An observant reader may have noticed that the actual command line for bw_smoothImage is `node bisweb.js smoothImage`. The script bw_smoothImage contains the following three lines:
