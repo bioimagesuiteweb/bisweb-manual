@@ -1,8 +1,3 @@
-
-[Back to main page](./index.html)
-
----
-
 ## The Orthogonal Viewer Application
 
 All BioImage Suite web applications share components and have a similar user interface. The picture below shows the `Orthogonal Viewer Tool`. This viewer consists of a single viewer plus some controls. All viewers in BioImage Suite Web can display two images:

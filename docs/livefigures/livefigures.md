@@ -1,8 +1,4 @@
 
-[Back to main page](../index.html)
-
----
-
 # Live Figures
 
 ## Usual Workflow for Saving Figures

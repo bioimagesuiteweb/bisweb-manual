@@ -1,8 +1,3 @@
-
-[Back to main page](./index.html)
-
---
-
 ## Image Editor
 
 

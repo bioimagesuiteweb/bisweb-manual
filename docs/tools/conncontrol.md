@@ -1,7 +1,3 @@
-[Back to main page](../index.html)
-
----
-
 # The Connectivity Visualization Tool
 
 This application is also described in [Shen et al, Nature Protocols 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5526681/) -- see in particular Figure 6. It was initially created for the needs of work published in [Finn et al, Nature Neuroscience 2015](https://www.ncbi.nlm.nih.gov/pubmed/26457551) and [Rosenberg et al, Nature Neusocience 2016](https://www.ncbi.nlm.nih.gov/pubmed/26595653). The default parcellation used is from [ Shen at al, NeuroImage 2013](https://www.ncbi.nlm.nih.gov/pubmed/23747961) and is available for download from our [NITRC page](https://www.nitrc.org/frs/?group_id=51).

@@ -1,7 +1,3 @@
-[Back to main page](../index.html)
-
----
-
 # The MNI <-> Talairach Tool
 
 _Note:_ This application consists of components of the Yale BioImage Suite Package. The MNI to Talairach mapping is from [Lacadie et al. NeuroImage 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2603575/). The Brodmann area definitions are from the following abstract: C.M. Lacadie, R. K. Fulbright, J. Arora, R.T.Constable, and X. Papademetris. Brodmann Areas defined in MNI space using a new Tracing Tool in BioImage Suite. Organization for Human Brain Mapping, 2008.

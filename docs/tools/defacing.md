@@ -1,7 +1,3 @@
-[Back to main page](../index.html)
-
----
-
 # Image Defacing
 
 This is a common procedure required to fully anonymize an MR brain image. This procedure masks out the face in an MRI making it impossible to "recognize" the subject (if the image is volume rendered or the face surface is extracted). 
