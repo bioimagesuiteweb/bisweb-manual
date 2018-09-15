@@ -81,15 +81,14 @@ All BioImage Suite web applications share components and have a similar user int
 The application consists of the following parts:
 
 * A. The Menu Bar -- this provides access to all algorithmic functionality in the application. 
-    * `Image` -- functionality for loading and saving the underlay anatomical image
+    * `File` -- functionality for loading and saving the underlay anatomical image
     * `Overlay` -- functionality for loading and saving (and clearing) the overlay functional image. 
     * `Edit' -- typically contains Undo and Redo functionality for image manipulation operations and tools to move images from overlay to image etc.
     * `Image Processing` -- this contains the image processing tools.
     * `Segmentation` -- this contains more modules to perform image segmentation. In the `Dual Viewer` application there is also a `Registration` menu that contains the image registration tools.
-    * `Display` -- in this single viewer, this simply has an option to display information about the currently display image. In the `Dual Viewer` application there are additional options to set the relative size of the two viewers.
     * `Help` -- this contains the usual `About this Application` option plus options for setting user preferences.
 
-* B. The Viewer (one application has two viewers). This can display the two images in either single slice or three-linked slice views. There is also a viewer component (see `Overlay Tool`) which displays multiple parallel sections of the same image.
+* B. The Viewer (one application has two viewers). This can display the two images in either single slice or three-linked slice views. There is also a viewer component (see `Overlay Tool`) which displays multiple parallel sections of the same image. The orange arrows next to each slice view allow you to increment or decrement that slice as desired. If the image is '4D' movie controls will appear at the bottom of the screen.
 
 * C. The image information under the cursor. As you click in the image, the current coordinates (i,j,k) of the image and the current intensity of the image (and the overlay if present) are shown here.
 
@@ -104,7 +103,7 @@ The application consists of the following parts:
     * The `Z-` and `Z+` buttons perform zoom in and out operations. You may also zoom using the mouse wheel in the usual way.
     * The `?` button shows the current image information ('See H'). 
 
-* F. In the case of a 4D image, there will be extra controls in the `Viewer Controls`. This include the `Frame` slider for slecting the frame and the `Movie` controls for playing a movie and setting the framerate.
+* F. Expanded View of the Viewer Controls. In the case of a 4D image, there will be extra controls in the `Viewer Controls`. This include the `Frame` slider for slecting the frame and the `Movie` controls for playing a movie and setting the framerate.
 
 * G. The image color-mapping controls. This set the windowing for the anatomical image. Values below 'Min Int' are to black (and also fully transparent) and intensities above 'Max Int' are saturated to white. The `Interpolate` flag can be used to allow WebGL interpolation or not (smoother images vs being able to see the actual voxels). Finally the `Auto-Contrast` toggle enables automatic windowing if this is desired. If there is a funtional image loaded, an additional set of controls called `Overlap Color Mapping` will appear. More on this below.
 
@@ -115,7 +114,7 @@ The application consists of the following parts:
 * `Crop` -- if turned on automatically crops empty space in the viewer to give a more pleasing snapshot.
 * `Take Snapshot` -- this actually invokes the code to acquire a snapshot.
 
-* J. The `_` button at the top right of the sidebar can be used to minimize and restore the sidebar.
+* J. The "double arrow" button at the top right of the sidebar can be used to minimize and restore the sidebar.
 
 ---
 
@@ -138,6 +137,8 @@ To try this out, open the application from the main BioImage Suite web page (und
         * `Max Overlay` : values above these are saturated.
         * `Cluster Size` : if this is greater than 0 then cluster filtering is performed to eliminate `small` blobs.
     * `Red`, `Green`, `Blue`, `Orange`, `Gray` -- this display the image using an anatomical style mapping. This is useful for overlaying two anatomical images to check registration results etc. In this setting, no clustering is performed and the colorscale is hidden.
+
+_Note_: In the bottom corner of the viewer, the text ``Img (30,36,20) = 183.09, Ovr=-2203.83` now shows the intensity of both the anatomical image (183.09) and the overlay image (-2203.83).
 
 This viewer can also be switched to `Mosaic` view by clicking the `Mosaic` Tab (just below the menu).
 
@@ -166,7 +167,7 @@ The Image Editor tool shown above is a tool to create and visualize interactive 
 
 One can create an objectmap on one of three ways:
 
-* Load it from an existing binary file
+* Load it from an existing binary file. (Under `Objectmap` | Load)
 * Create it by manually defining the regions using the `Paint Tool`
 * Create it by thresholding the underlying image. The example above shows the use of the `Create Objectmap` tool (essentially a binary thresholding tool) to create the obejctmap.
 
@@ -174,7 +175,7 @@ One can create an objectmap on one of three ways:
 
 ![Image Editor Parts](images/imageeditor_parts.png)
 
-Once an objectmap is n memory it can displayed and manipulated using tools provided in the `Image Editor` Tool. The figure above highlights five different pieces of functionality as follows:
+Once an objectmap is n memory it can displayed and manipulated using tools provided in the `Image Editor` Tool. The figure above highlights five different pieces of functionality (accessible from the `Tools` menu) as follows:
 
 * A: Overlay color mapping: Here we assume explicitly that the overlay is an objectmap hence the only display/color mapping option available is the `Opacity`. 
 * B: The Paint Tool: this is the core of the BioImage Suite Web interactive segmentation tools. Essentially this is a smart paint-brush tool where the user selects a color (6 shown below plus more can be accessed by pressing the `...` button) and paints over the image to create/edit an objectmap.
