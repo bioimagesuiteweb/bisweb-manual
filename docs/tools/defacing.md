@@ -11,7 +11,7 @@ Our implementation derives (and uses data from) [the OpenfMRI Project](https://g
 
 ## Method 1 -- Simple Version
 
-This is a a fully automated process as follows:
+This is a a fully automated process:
 
 A. Open the [orthogonal viewer](https://bioimagesuiteweb.github.io/webapp/viewer.html) tool in BioImage Suite Web.
 
