@@ -13,27 +13,27 @@ Our implementation derives (and uses data from) [the OpenfMRI Project](https://g
 
 This is a a fully automated process as follows:
 
-1. Open the [orthogonal viewer](https://bioimagesuiteweb.github.io/webapp/viewer.html) tool in BioImage Suite Web.
+A. Open the [orthogonal viewer](https://bioimagesuiteweb.github.io/webapp/viewer.html) tool in BioImage Suite Web.
 
-2. Under `File` menu select the `Load Image` option and then load the image you would like to deface. Alternatively simply drag the file and "drop" it into the viewer
+B. Under `File` menu select the `Load Image` option and then load the image you would like to deface. Alternatively simply drag the file and "drop" it into the viewer
 
 ![Start the Deface Tool](figures/deface1.png)
 
-3. Under the `Segmentation` menu, select `Deface Head Image`. This will open the `Deface Head Image` Tool and place it in the sidebar as shown in the figure above.
+C. Under the `Segmentation` menu, select `Deface Head Image`. This will open the `Deface Head Image` Tool and place it in the sidebar as shown in the figure above.
 
 ![Press the deface button](figures/deface2.png)
 
-4. Press the "Deface" button (in Green) -- this is under the mouse cursor in the image above
+D. Press the "Deface" button (in Green) -- this is under the mouse cursor in the image above
 
-5. Wait for a little minute -- this might take a minute or so depending on the speed of your computer. __Please realize that all processing is done locally. No data is ever uploaded to any of our servers__.
+E. Wait for a little minute -- this might take a minute or so depending on the speed of your computer. __Please realize that all processing is done locally. No data is ever uploaded to any of our servers__.
 
 ![The result](figures/deface3.png)
 
-6. Once the defacing process is completed, the result will be overlaid on the original ,as shown in the figure above, using a brown-ish colormap. You can see that in the sagital view above the overlay is missing the face region (as it should).
+F. Once the defacing process is completed, the result will be overlaid on the original ,as shown in the figure above, using a brown-ish colormap. You can see that in the sagital view above the overlay is missing the face region (as it should).
 
 ![Save the image](figures/deface4.png)
 
-7. To save the result, save the overlay image using the `Save Overlay` option under the `Overlay` menu as shown above.
+G. To save the result, save the overlay image using the `Save Overlay` option under the `Overlay` menu as shown above.
 
 ---
 
@@ -42,7 +42,7 @@ This is a a fully automated process as follows:
 
 This is a version of the method above that allows for manual editing and masking.
 
-Repeat steps 1-5 but using the [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool instead. The only difference is that the `Deface Head Image` option is located under the `Tools` menu.
+Repeat steps A-E from the `simple version` __but__ using the [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool instead. The only difference is that the `Deface Head Image` option is located under the `Tools` menu.
 
 ![Deface Mask](figures/deface5.png)
 
