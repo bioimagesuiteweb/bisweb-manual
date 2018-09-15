@@ -1,13 +1,32 @@
 ## Table Of Contents
 
+First we conver some core information in this document:
+
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) -- how to get and run the software.
 * [Some Key Information](#some-key-information) -- information about configuring your browser and default image orientations.
-* [The Orthogonal Viewer Application](viewers.html) -- the "first" application with an explanation of how the viewers work (including colormapping etc.)
-* [The Overlay Viewer Application](overlayviewer.html) -- an application optimized for displaying functional overlays.
+
+The following documents describe the different applications in BioImage Suite Web.
+
+* [Displaying Images](viewers.html) -- we discuss here how the core viewer in BioImage Suite web works (including colormapping etc.). This is shared by the almost all the applications.
+* [The Overlay Viewer Application](overlayviewer.html) -- an application optimized for displaying functional overlays, including a brief description of the Mosaic Viewer Tool included here.
 * [The Image Editor Application](imageeditor.html) -- an application that can be used for interactive segmentation and VOI analysis of images.
 * [The Connectivity Visualization Tool](tools/conncontrol.html) -- an application to visualize connectome matrices
-* [The MNI2TAL Tool](tools/mni2tal.html) -- an application to map MNI to Talairach coordinates and vice-versa
+* [The MNI2TAL Tool](tools/mni2tal.html) -- an application to map MNI to Talairach coordinates and vice-versa.
+
+These documents describe how to perform specific tasks in one or more of the applications in the software.
+
 * [Defacing Images](tools/defacing.html) -- an example of using the tools in BioImage Suite Web to deface a brain image.
+
+In addition to web applications, BioImage Suite web can be run on the commandline. This is discussed in the following:
+
+* [Command Line Tools](CommandLineTools.html) -- this is a description of the command line tools in BioImage Suite Web.
+
+<!---
+The final document discusses running regression testing:
+
+* [Regression Testing](RegressionTesting.html) -- validating your own setup by running the regression tests in BioImage Suite Web.
+
+-->
 
 __Note:__ This document and those linked to it contain the beginnings of the user documentation for [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief introduction to the software can be found in this [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If you are looking for developer documentation, this may be found in [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/tree/master/doc).
 
