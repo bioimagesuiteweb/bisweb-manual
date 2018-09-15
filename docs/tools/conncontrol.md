@@ -46,7 +46,9 @@ The connectome matrices are shown under `A` (these are simply binary matrices wi
 
 To visualize a connectivity pattern, one uses the controls in the `Connectivity Control` which appears on the far right of the viewer and shown magnigied in the figure above. The options here are:
 
-1. The Filtering Controls. Given the number of edges in a connectome, it is impractal to visualize them all at the same time. The following controls enable the user to filter edges to highlight aspects of their data. An edge connects two nodes. It will be shown if at least one of the nodes satisfies the filtering criteria below.
+### The Filtering Controls. 
+
+Given the number of edges in a connectome, it is impractal to visualize them all at the same time. The following controls enable the user to filter edges to highlight aspects of their data. An edge connects two nodes. It will be shown if at least one of the nodes satisfies the filtering criteria below.
 
 * Mode -- this selectes the filtering mode which is one of
     * 'All' -- use all nodes
@@ -64,7 +66,66 @@ To visualize a connectivity pattern, one uses the controls in the `Connectivity 
 
 * Lines to Draw -- this is one of `Both`, `Positive` or `Negative`. If `Positive` we will only show edges from the `Positive` Matrix, `Both` from both and `Negative` from the negtive `Matrix`.
 
+_Note_: The `Node`, `Lobe` and `Network` entries are automatically updated each time the user clicks either in the circle view or the 2D view to select a node. The values of these are set by the properties of the current node.
 
+### The Drawing Options
+
+Once the filters are set, the user may create the lines using the `Create Lines` button. The lines are additive, so if the user changes the filters and clicks `Create Lines`, the new lines will be drawn in addition to the old lines. To clear the lines use the `Clear Lines` button.
+
+### The Display Controls
+
+![The Display Controls](figures/conn4.png)
+
+At the bottom of the connectivity control, there are some extra options under the `Display` tab. These are initially _hidden_ but can be opened by clicking on the `Display` Tab as shown in the figure above.
+
+These controls, control, how the lines are drawn (as opposed to the filtering controls which control _which_ lines are drawn). The options are as follows:
+
+
+* (2D Circle View) Length -- this is the line of the edge and controls how straight vs how curved the lines will be. One should play with this to understand what it does.
+
+* (2D Circle View) Thickness -- the thickness of the lines -- setting this to a higher value makes the lines thicker.
+
+* (3D View) Radius -- this controls the scaling of the spheres (nodes) as shown in the 3D view. The size of the sphere that represents a given node is a product of the radius and the degree of the node.
+
+* Pos-color -- the color of the lines for positive edges.
+
+* Neg-color - the color of the lines for negative edges.
+
+There are also two buttons below these namely:
+
+* `Toggle Legends` -- this shows or hides the annotation on the figures (e.g. the key describing the mapping between colors and lobes next the circle plot).
+
+* `Toggle 3D Mode` -- this switches the viewer between 3 modes as shown below.
+
+![3D Modes](figures/conn5.png)
+
+## Using your Own Data
+
+### Parcellation
+
+If your data was computed using the Shen et al parcellation or the AAL atlas, you may simply select this parcellation from the `Parcellations` menu.
+
+__Importing a parcellation as an image:__ You may import a parcellation either as an image or as a text file. In the case of an image, BioImage Suite Web expects an objectmap style image (in MNI space) where the value of each voxel is equal to the region it belongs to. To do this click on the option `Import Parcellation as an Image` under the `Advanced Menu`
+
+__Importing a parcellation as a text file:__ In this scenario, the user simply supplies the MNI coordinates of each node. This may be either a CSV or a text file with each node being specified on each line.
+
+![Parcellation Import](figures/conn6.png)
+
+In both cases, once the import is completed, the user will be prompted to enter a description of the atlas and then to save it in a JSON format file with a `.parc` extension. In the future this file may be loaded using the `Load Node Definition File` under the `File Menu`
+
+### Connectome Matrices
+
+This application can visualize two connectome matrices at once. These can be loaded as the `Positive` matrix and the `Negative` Matrix under the file menu. These should be binary files containing 1 or 0 and stored in .csv file (.txt also works but be careful). The program expects that the matrices are square and have the same dimensions as the underlying parcellation (e.g. 268x268 in the case of the Shen parcellation).
+
+To load the first connectome matrix, simply use the `Load Positive Matrix` option under the `File` menu. If you would like to load a second matrix use the `Load Negative Matrix` option under the same menu. To clear the matrices use the option `Clear Matrices` also under the `File Menu`.
+
+![Visualizing the Connectome Matrices](figures/conn7.png)
+
+You may also visualize the matrices, as matrices, using the option `Show Matrices` under the `View` menu as shown above.
+
+![Connectivity Information](figures/conn8.png)
+
+Finally one can get information about the matrices using the option `Show High Degree Nodes` under the `View` menu as shown on the figure above. This will create a table a left sidebar (see figure above) showing the information about the top nodes. Clicking on any of the node entries in `green` will place the cross hairs of the viewer and circle on the particular node's location.
 
 
 
