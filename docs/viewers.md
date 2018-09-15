@@ -1,6 +1,6 @@
-## The Orthogonal Viewer Application
+## Displaying Images
 
-All BioImage Suite web applications share components and have a similar user interface. The picture below shows the `Orthogonal Viewer Tool`. This viewer consists of a single viewer plus some controls. All viewers in BioImage Suite Web can display two images:
+All BioImage Suite web applications share components and have a similar user interface. The picture below shows the [Orthogonal Viewer Tool](https://bioimagesuiteweb.github.io/webapp/viewer.html). This viewer consists of a single viewer plus some controls. All viewers in BioImage Suite Web can display two images:
 
 1. The underlay "image" -- this is often the anatomical image and be loaded and saved from the `Image` Menu.
 2. The "overlay" or "objectmap" image -- this is often a functional image or a segmentation image. This can be loaded and saved from the `Overlay` menu.
@@ -18,6 +18,8 @@ The application consists of the following parts:
     * `Image Processing` -- this contains the image processing tools.
     * `Segmentation` -- this contains more modules to perform image segmentation. In the `Dual Viewer` application there is also a `Registration` menu that contains the image registration tools.
     * `Help` -- this contains the usual `About this Application` option plus options for setting user preferences.
+
+We will discuss the tools in `Image Processing` and `Segmentation` in other documents.
 
 * B. The Viewer (one application has two viewers). This can display the two images in either single slice or three-linked slice views. There is also a viewer component (see `Overlay Tool`) which displays multiple parallel sections of the same image. The orange arrows next to each slice view allow you to increment or decrement that slice as desired. If the image is '4D' movie controls will appear at the bottom of the screen.
 
@@ -49,31 +51,21 @@ The application consists of the following parts:
 
 ---
 
-### The Overlay Viewer Application
+### 4D Images and Movie Display
 
-All viewers can display overlays. The `Overlay Viewer` is particularly optimized for this task. This is shown below.
+![4D Overlay](images/4doverlay.png)
 
-![The Overlay Viewer](images/overlayviewer.png)
+The figure above shows the viewer displaying two images. The underlay image is a 4D image (once of our synthetic test motion images with exaggerated motion) and the overlay is the average frame of the 4D image resampled to a lower resolution (for illustration). Four things in particular from this figure are worth pointing out:
 
-This is a dual viewer that shows functional overlays in both an `Orthogonal` (three orthogonal slice viewer shown above) and a `Mosaic` (multiple parallel slices -- see below) viewer which are synchronized to have the same color mapping scheme.
+* A -- the movie controls. When either image (underlay or overlay) is a 4D image, the movie controls automatically appear. You can use these to either manually advance the frame, play a movie of step.
 
-To try this out, open the application from the main BioImage Suite web page (under `Applications| Overlay Viewer`) and then under `Help`, select `Load Sample Data`. This will load a sample anatomical/functional image pair. (You may load your own images using `Image|Load Image` and `Overlay|Load Overlay`. As discussed above, once an overlay image is loaded, the `Viewer Controls` have an additional set of controls labeled `Overlay Color Mapping` (shown on the right). The controls here perform the following tasks:
+* B -- the image information in the viewer. This shows the intensity of both the image and the intensity under the cross-hairs. Since the images have different resolution, the coordinates are different, i.e. for the Image (`Img`) we get the value at (32,28,21,2) (frame =2, all coordinates _including_ frame begin at zero), whereas for the lower resolution overlay (`Ovr`) we get the value at (24,21,14,0)  (the last number is capped to the number of frames in the overlay). (Compare this to item `C` of the previous figure.)
 
-* `Opacity` - the relative opacity for 0 (completely transparent) to 1 (fully opaque). Use this to partially show the anatomy under the functional map if desired.
-* `Overlay Type` -- the overlay can be displayed using a number of different color maps. These are
-    * `Objectmap` -- this is used for displaying sementation objectmaps. The overlay is rendered using a rainbow-like lookup table.
-    * `Overlay` and `Overlay2` -- these are slightly different variants of colormaps used to display functional images. The mapping (explicitly shown in the colorscale in the viewer -- bottom right -- is performed as follows):
-        * If `Overlay Show` is set to `Both` both positive and negative values are shown otherwise either only positive or only negative values are shown.
-        * `Min Overlay` : parts of the image whose intensity is below this (in an absolute sense) is displayed in a completely transparent color (not shown effectively).
-        * `Max Overlay` : values above these are saturated.
-        * `Cluster Size` : if this is greater than 0 then cluster filtering is performed to eliminate `small` blobs.
-    * `Red`, `Green`, `Blue`, `Orange`, `Gray` -- this display the image using an anatomical style mapping. This is useful for overlaying two anatomical images to check registration results etc. In this setting, no clustering is performed and the colorscale is hidden.
+* C -- in the viewer controls we now have a 'Frame/Comp' control. This allows us to set the 4th dimension of the cross hairs. While the range of the I,J and K-coord sliders correspond to the dimensions of the underlay image, the Frame slider, has range equal to the maximum of the the number of frames in the two images.
 
-_Note_: In the bottom corner of the viewer, the text ``Img (30,36,20) = 183.09, Ovr=-2203.83` now shows the intensity of both the anatomical image (183.09) and the overlay image (-2203.83).
+* D -- the movie controls. This last set of controls allows us to set the frame rate at which a movie will play and provides a secondary means to start/stop a movie in addition to the controls in A.
 
-This viewer can also be switched to `Mosaic` view by clicking the `Mosaic` Tab (just below the menu).
+![Image Information](images/4doverlay2.png)
 
-![Mosaic Mode for Overlay Viewer](images/mosaic.png)
-
-This shows multiple parallel slices of a particular orientation (selected using `Plane`). You may set the number of rows and columns, the first slice and increment (which may be negative). The colormapping controls are identical to the orthogonal (3-slice view) and is synchronized between the `Orthogonal` and `Mosaic` tabs.
+If at any point, you are curious (or have forgotten) what images are being displayed and their characteristics, simply click on the `?` button under Viewer Controls as shown in the figure above. This will provide information about both images (names, dimensions, voxel size, orientation etc.) It is easy, to notice, for example, that the two images in the previous two figures have different resolution.
 
