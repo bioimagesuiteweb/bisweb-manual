@@ -4,7 +4,7 @@
 * [Some Key Information](#some-key-information) -- information about configuring your browser and default image orientations.
 * [The Orthogonal Viewer Application](viewers.html#the-orthogonal-viewer-application) -- the "first" application with an explanation of how the viewers work (including colormapping etc.)
 * [The Overlay Viewer Application](viewers.html#the-overlay-viewer-application) -- an application optimized for displaying functional overlays.
-* [The Image Editor Application](image-editor) -- an application that can be used for interactive segmentation and VOI analysis of images.
+* [The Image Editor Application](imageeditor.html) -- an application that can be used for interactive segmentation and VOI analysis of images.
 * [The Connectivity Visualization Tool](tools/conncontrol.html) -- an application to visualize connectome matrices
 * [The MNI2TAL Tool](tools/mni2tal.html) -- an application to map MNI to Talairach coordinates and vice-versa
 * [Defacing Images](tools/defacing.html) -- an example of using the tools in BioImage Suite Web to deface a brain image.
