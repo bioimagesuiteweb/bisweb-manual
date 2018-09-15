@@ -49,9 +49,9 @@ The cluster tool provides an easy way to examine the larger functional clusters 
 
 ---
 
-### Mosaic Viewer Mode
+### Mosaic Viewer 
 
-This viewer can also be switched to `Mosaic` view by clicking the `Mosaic` Tab (just below the menu). Please note that the cluster and atlas tools do not work within the mosaic viewer tab, as this does not have a concept of current location (or cross hairs).
+This application can also be switched to `Mosaic` view by clicking the `Mosaic` Tab (just below the menu). Please note that the cluster and atlas tools do not work within the mosaic viewer tab, as this does not have a concept of current location (or cross hairs).
 
 ![Mosaic Mode for Overlay Viewer](images/mosaic.png)
 
