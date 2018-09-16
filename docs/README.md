@@ -21,12 +21,9 @@ In addition to web applications, BioImage Suite web can be run on the commandlin
 
 * [Command Line Tools](CommandLineTools.html) -- this is a description of the command line tools in BioImage Suite Web.
 
-<!---
 The final document discusses running regression testing:
 
-* [Regression Testing](RegressionTesting.html) -- validating your own setup by running the regression tests in BioImage Suite Web.
-
--->
+* [Regression Testing](biswebtest.html) -- validating your own setup by running the regression test web application in BioImage Suite Web.
 
 __Note:__ This document and those linked to it contain the beginnings of the user documentation for [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief introduction to the software can be found in this [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If you are looking for developer documentation, this may be found in [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/tree/master/doc).
 
