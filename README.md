@@ -10,3 +10,6 @@ you are looking for developer documentation, this may be found in
 To begin reading the user documentation
 [open the intro file](docs/README.md). _This is work in progress._
 
+The files in this repository are used to generate the online documentation that can be found at [https://bioimagesuiteweb.github.io/bisweb-manual/](https://bioimagesuiteweb.github.io/bisweb-manual/).
+
+
