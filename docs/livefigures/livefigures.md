@@ -51,6 +51,8 @@ This is the overall procedure:
 
 ![The Overlay Viewer](overlayviewer.png)
 
+__Note__: The overlay tool is described in more detail in [this document](../overlayviewer.md)
+
 ### 1. Load Anatomical Image
 
 1. Under the File menu select Load image. 
