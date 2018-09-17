@@ -10,8 +10,10 @@ The following documents describe the different applications in BioImage Suite We
 * [Displaying Images](viewers.md) -- we discuss here how the core viewer in BioImage Suite web works (including colormapping etc.). This is shared by the almost all the applications.
 * [The Overlay Viewer Application](overlayviewer.md) -- an application optimized for displaying functional overlays, including a brief description of the Mosaic Viewer Tool included here.
 * [The Image Editor Application](imageeditor.md) -- an application that can be used for interactive segmentation and VOI analysis of images.
-* [The Connectivity Visualization Tool](tools/conncontrol.md) -- an application to visualize connectome matrices
-* [The MNI2TAL Tool](tools/mni2tal.md) -- an application to map MNI to Talairach coordinates and vice-versa.
+* [The Connectivity Visualization Tool](tools/conncontrol.md) -- an application to visualize connectome matrices.
+* [The MNI2TAL Tool](tools/mni2tal.md) -- an application to map MNI to Talairach coordinates and 
+vice-versa.
+* [The Dual Viewer Tool](tools/dualviewer.md) -- an advanced dual viewer application. This is intended to be primarily used for image registration tasks.
 
 These documents describe how to perform specific tasks in one or more of the applications in the software.
 
