@@ -17,7 +17,7 @@ vice-versa.
 
 These documents describe how to perform specific tasks in one or more of the applications in the software.
 
-* [Image Processing Tasks](tools/imageproc.md) -- here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
+* [Image Processing Tasks](tools/imageprocessing.md) -- here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
 
 * [Defacing Images](tools/defacing.md) -- an example of using the tools in BioImage Suite Web to deface a brain image.
 
