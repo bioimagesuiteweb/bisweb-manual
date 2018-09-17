@@ -47,7 +47,10 @@ The figure above shows an example test run, where we chose to run all the tests 
 
 When the test is finished, the status bar at the bottom of the browser shows a summary of what happened (`completed 7/88, passed 7/88, failed=0/88, skipped=81/88`). The 81 skipped tests are thoses tests that do not involve this module and have not been executed.
 
-The log for all tests is preserved in the webpage, and one can scroll up to see the results for each test. In addition, the `Details` tab at the bottom of each test can be expanded to show more details, as is shown below
+Please note that a certain subset of the tests is designed to _intentionally fail_ to catch bugs in the actual test running process.
+
+
+The log for all tests is preserved in the webpage, and one can scroll up to see the results for each test. In addition, the `Details` tab at the bottom of each test can be expanded to show more details, as is shown below:
 
 ![test3](images/test3.png)
 
