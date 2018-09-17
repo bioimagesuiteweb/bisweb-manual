@@ -1,6 +1,6 @@
 # Image Defacing
 
-This is a common procedure required to fully anonymize an MR brain image. This procedure masks out the face in an MRI making it impossible to "recognize" the subject (if the image is volume rendered or the face surface is extracted). 
+This is a common procedure required to fully anonymize an MR brain image. This procedure masks out the face in an MRI making it impossible to "recognize" the subject (if the image is volume rendered or the face surface is extracted).
 Our implementation derives (and uses data from) [the OpenfMRI Project](https://github.com/poldrack/openfmri/tree/master/pipeline/facemask).
 
 _Note:_ If you need help with the basic operations of BioImage Suite Web's viewers, please see [the intro to viewers](../viewers.md) document
