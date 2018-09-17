@@ -18,12 +18,16 @@ vice-versa.
 These documents describe how to perform specific tasks in one or more of the applications in the software.
 
 * [Image Processing Tasks](tools/imageprocessing.md) -- here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
-
 * [Image Segmentation](tools/segmentationtools.md) -- this describes image segmentation functionality in our software.
-
 * [Image Registration](dualviewer.md) -- the image registration tools are described in the document describing the Dual Viewer application.
-
 * [Defacing Images](tools/defacing.md) -- an example of using the tools in BioImage Suite Web to deface a brain image.
+
+The following documents describes advanced application functionality that is common among most of the applications. 
+
+* [Advanced Functionality](tools/advanced.md) -- this document describes advanced functionality such as (i) Loading and Saving the Application State], (ii) copying and pasteing viewer configurations accross applications and (iii) transfering images from viewer to viewer wihin an application.
+* [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
+* [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
+* [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
 
 In addition to web applications, BioImage Suite web can be run on the commandline. This is discussed in the following:
 
@@ -33,11 +37,14 @@ The final document discusses running regression testing:
 
 * [Regression Testing](biswebtest.md) -- validating your own setup by running the regression test web application in BioImage Suite Web.
 
+
+
 __Note:__ This document and those linked to it contain the beginnings of the user documentation for [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief introduction to the software can be found in this [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If you are looking for developer documentation, this may be found in [the doc directory of the source repository](https://github.com/bioimagesuiteweb/bisweb/blob/master/docs/README.md).
 
 _This document represents work in progress._
 
 
+---
 ---
 
 ### Starting BioImage Suite Web
