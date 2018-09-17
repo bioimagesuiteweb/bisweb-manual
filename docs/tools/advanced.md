@@ -12,6 +12,8 @@ This file can then be reloaded later (by you, or by a collaborator) to restore t
 
 The same applies to the Connectivity Viewer and other tools.
 
+---
+
 ## Copying and Paste-ing Viewers
 
 Each application in BioImage Suite has one (or in the case of the [Dual Viewer](../dualviewer.md) two) viewer components. These can be moved from application to application. For example, open the [overlay viewer](https://bioimagesuiteweb.github.io/webapp/overlayviewer.html?load=https://bioimagesuiteweb.github.io/webapp/images/viewer.biswebstate) and load the sample data under the `Help` menu. (The link given will do both in one go!)
@@ -25,6 +27,8 @@ The viewer state clipboard is preserved across sessions (assuming you are using 
 In the dual viewer tool, we have a slightly more complicated arrangement, given that we have two viewers. Here there are two copy and paste options, one for each viewer. One can simply do "copy viewer 1" and "paste viewer 2" to duplicate the contents of Viewer 1 to Viewer 2 (if desired).
 
 ![DualPaste](figures/advanced2.png)
+
+---
 
 ## Transfering Images -- the Advanced Transfer Tool
 

@@ -48,7 +48,7 @@ The options are as follows:
 
 ## Running a Linear Registration
 
-This is often a straight-forward process. First load the reference image in `Viewer 1` and the target image in `Viewer2`. The goal is to create a transformation that can be used to reslice the target image to match the reference image. This methodology derives from the work of [Studholme et al](https://www.ncbi.nlm.nih.gov/pubmed/9873927)
+This is often a straight-forward process. First load the reference image in `Viewer 1` and the target image in `Viewer2`. The goal is to create a transformation that can be used to reslice the target image to match the reference image. This methodology derives from the work of [Studholme et al](https://www.ncbi.nlm.nih.gov/pubmed/9873927).
 
 ### Loading the images to register
 
