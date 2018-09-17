@@ -44,7 +44,7 @@ Repeat steps A-E from the `simple version` __but__ using the [Image Editor](http
 
 ![Deface Mask](figures/deface5.png)
 
-Once the defacing process is completed you will get an editable mask shown in red in the figure above. This can be edited using the `Paint Tool` (see [the intro manual page](../index.html) for more details.)
+Once the defacing process is completed you will get an editable mask shown in red in the figure above. This can be edited using the `Paint Tool` (see [the its description](../imageeditor.md) for more details.)
 
 ![Masking the image](figures/deface6.png)
 

@@ -36,7 +36,7 @@ The atlas tool provides information about the location under the viewer crosshai
 
 ![Atlas Tool](livefigures/step5_atlas.png)
 
-The definition of lobes and Brodmann areas derives from some of our prior work (see the [MNI2TAL](./tools/mni2tal.html) application for references and details. The Networks are derived from the work of Power et al, Neuron 2011.). The software detects if the image is in the space of one of its existing atlases (by using the image dimensions in mm -- the only one currenly available is the "human brain atlas")and automatically provides the information. If the image is not in MNI space, for example, then no information can be provided.
+The definition of lobes and Brodmann areas derives from some of our prior work (see the [MNI2TAL](./tools/mni2tal.md) application for references and details. The Networks are derived from the work of Power et al, Neuron 2011.). The software detects if the image is in the space of one of its existing atlases (by using the image dimensions in mm -- the only one currenly available is the "human brain atlas")and automatically provides the information. If the image is not in MNI space, for example, then no information can be provided.
 
 #### The Cluster Tool
 
