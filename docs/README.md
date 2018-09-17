@@ -29,8 +29,9 @@ The following documents describes advanced application functionality that is com
 * [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
 * [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
 
-In addition to web applications, BioImage Suite web can be run on the commandline. This is discussed in the following:
+In addition to web applications, BioImage Suite web can be run as desktop applications. This is discussed in the following:
 
+* [Electron Applications](ElectronApps.md) -- this is a description of the [Electron-based](https://electronjs.org/) Desktop Applications in Biomage Suite Web.
 * [Command Line Tools](CommandLineTools.md) -- this is a description of the command line tools in BioImage Suite Web.
 
 The final document discusses running regression testing:
