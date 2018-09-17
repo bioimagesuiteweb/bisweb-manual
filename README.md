@@ -12,6 +12,8 @@ To begin reading the user documentation
 
 The files in this repository are used to generate the online documentation that can be found at [https://bioimagesuiteweb.github.io/bisweb-manual/](https://bioimagesuiteweb.github.io/bisweb-manual/).
 
+---
+---
 
 ### To add
 
