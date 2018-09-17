@@ -19,6 +19,10 @@ These documents describe how to perform specific tasks in one or more of the app
 
 * [Image Processing Tasks](tools/imageprocessing.md) -- here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
 
+* [Image Segmentation](tools/segmentationtools.md) -- this describes image segmentation functionality in our software.
+
+* [Image Registration](dualviewer.md) -- the image registration tools are described in the document describing the Dual Viewer application.
+
 * [Defacing Images](tools/defacing.md) -- an example of using the tools in BioImage Suite Web to deface a brain image.
 
 In addition to web applications, BioImage Suite web can be run on the commandline. This is discussed in the following:

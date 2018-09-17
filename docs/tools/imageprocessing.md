@@ -1,6 +1,6 @@
-# Image Processing Tasks In BioImage Suite Web
+# Image Processing Tools In BioImage Suite Web
 
-The component applications in BioImage Suite Web provide the ability to perform many `standard` medical image analysis processing tasks. These are available from the `Image Processing` menu of the [main  orthogonal or `single` viewer application](../viewers.md) and the [dual viewer](../dualviewer.md) applications.
+The component applications in BioImage Suite Web provide the ability to perform many `standard` medical image analysis processing tasks. These are available from the `Image Processing` menu of the [main  orthogonal viewer application](../viewers.md) and the [dual viewer](../dualviewer.md) applications.
 
 ## Tools Summary
 
