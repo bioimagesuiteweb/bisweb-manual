@@ -19,10 +19,10 @@ The files in this repository are used to generate the online documentation that 
 
 0. Roadmap
 
-1. Image Processing Tools
+DONE    1. Image Processing Tools
 
-    * Input and Output (single v dual viewer, image v overlay)
-    * Describe the tools
+        * Input and Output (single v dual viewer, image v overlay)
+        * Describe the tools
 
 2. Segmentation Tools
 
