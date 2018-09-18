@@ -48,18 +48,17 @@ D. The Regularize Objectmap Tool -- this magic tool performs markov random field
 
 E. The Mask Image Tool -- this can be used to mask the underlying anatomical image with the objectmap to mask out all parts of the image outside the mask (if `Inverse` is set to `Off` ). Setting `Inverse` to `On` allows one to mask the region inside the objectmap. Before masking, the objectmap must be binarized by thresholding it using the threshold set using the `Threshold` slider.
 
+
+#### VOI Analysis Tools
+
 ![VOI Analysis](images/voianalysis.png)
 
-Given an objectmap and a 4D image we can generate image timeseries plots as shown above. To invoke this control go to 'Objectmap | VOI Analysis'. By default, the graph shows the average intensity in each region over time. There are five buttons at the bottom of this which perform the following operations:
+Given an image and an objectmap, we can generate plots of VOI image data. If the image is 4D, this tool can generate image timeseries plots as shown above. To invoke this control go to `Objectmap | VOI Analysis`. By default, the graph shows the average intensity in each region over time. There are five buttons at the bottom of this which perform the following operations:
 
-* Plot VOI Values -- this is the default operation. If the underlying anatomical image is 4D the result is a plot like the figure above. If it is a 3D image, then a bar chart is generated instead.
-
-* Plot VOI Volumes -- This creates a bar chart of VOI region volumes.
-
-* Export as CSV -- this outputs the data used in the plots as a comma-separated file (CSV) for import into Excel/Matlab etc. for more detailed plotting.
-
-* Save Snaphot -- saves the current plot as a .png image file
-
-* Close -- closes the VOI Timeseries plotter window.
+* `Plot VOI Values` -- this is the default operation. If the underlying anatomical image is 4D the result is a plot like the figure above. If it is a 3D image, then a bar chart is generated instead.
+* `Plot VOI Volumes` -- creates a bar chart of VOI region volumes (in mm^3).
+* `Export as CSV` -- this outputs the data used in the plots as a comma-separated file (CSV) for import into Excel, Matlab,  etc. for more detailed plotting.
+* `Save Snaphot` -- saves the current plot as a .png image file.
+* `Close` -- closes the VOI Timeseries plotter window.
 
 
