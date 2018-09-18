@@ -5,7 +5,7 @@
 
 ![The Image Editor Tool](images/imageeditor.png)
 
-The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool shown above is a tool to create and visualize interactive segmentations, as well as to correct existing segmentations (e.g. skull stripping). This tool uses the core orthogonal viewer described in [the viewers document](./viewers.html). It has the following additional features:
+The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool shown above is a tool to create and visualize interactive segmentations, as well as to correct existing segmentations (e.g. skull stripping). This tool uses the core orthogonal viewer described in ([Displaying Images](viewers.md). It has the following additional features:
 
 * Overlays are explicitly labeled as Objectmaps (i.e. the value in this overlay image is explicitly a tag for a region)
 * The ability to edit the object maps using the "Paint Tool".
