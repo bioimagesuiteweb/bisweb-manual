@@ -5,12 +5,12 @@
 
 ![The Image Editor Tool](images/imageeditor.png)
 
-The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool shown above is a tool to create and visualize interactive segmentations, as well as to correct existing segmentations (e.g. skull stripping). This tool uses the core orthogonal viewer described in ([Displaying Images](viewers.md). It has the following additional features:
+The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool shown above is a tool to create and visualize  segmentations interactively, as well as to correct existing segmentations (e.g. skull stripping). This tool uses the core orthogonal viewer described in [Displaying Images](viewers.md). It has the following additional features:
 
 * Overlays are explicitly labeled as Objectmaps (i.e. the value in this overlay image is explicitly a tag for a region)
 * The ability to edit the object maps using the "Paint Tool".
 * Provision of selected set of modules (Create Objectmap, Morphology Operations, Regularize Objectmap, Mask Image) for modifying object maps.
-* The integration of the VOI (`Volume-of-interest`) analysis tool that uses the current objectmap to analyze the underlying image (which could be a timeseries as opposed to just a static image).
+* The integration of the volume-of-interest (VOI) analysis tool that uses the current objectmap to analyze the underlying image (which could be a timeseries as opposed to just a static image).
 
 #### Creating an Objectmap
 
@@ -18,15 +18,15 @@ The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool s
 
 One can create an objectmap on one of three ways:
 
-* Load it from an existing binary file. (Under `Objectmap` | Load)
-* Create it by manually defining the regions using the `Paint Tool`
-* Create it by thresholding the underlying image. The example above shows the use of the `Create Objectmap` tool (essentially a binary thresholding tool) to create the obejctmap.
+1. Load it from an existing binary file. (Under `Objectmap` | `Load`)
+2. Create it by manually defining the regions using the `Paint Tool`
+3. Create it by thresholding the underlying image. The example above shows the use of the `Create Objectmap` tool (essentially a binary thresholding tool) to create the obejctmap.
 
 #### Detailed Operations
 
 ![Image Editor Parts](images/imageeditor_parts.png)
 
-Once an objectmap is n memory it can displayed and manipulated using tools provided in the `Image Editor` Tool. The figure above highlights five different pieces of functionality (accessible from the `Tools` menu) as follows:
+Once an objectmap is in memory it can displayed and manipulated using tools provided in the Image Editor `Tools`. The figure above highlights five different pieces of functionality (accessible from the `Tools` menu) as follows:
 
 * A: Overlay color mapping: Here we assume explicitly that the overlay is an objectmap hence the only display/color mapping option available is the `Opacity`. 
 * B: The Paint Tool: this is the core of the BioImage Suite Web interactive segmentation tools. Essentially this is a smart paint-brush tool where the user selects a color (6 shown below plus more can be accessed by pressing the `...` button) and paints over the image to create/edit an objectmap.
