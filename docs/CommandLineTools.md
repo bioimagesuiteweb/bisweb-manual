@@ -64,13 +64,13 @@ There are over 30 such tools in the `bin` directory that mirror the modules avai
 Here is a side-by-side view of the command line version of the linear registration  tool and the graphical-user interface version in a Web Application. Other than for the code for specifying inputs, parameters and handling the output files, the rest of the code is _identical_ between the two versions.
 
 
-__Note:__ An observant reader may have noticed that the actual command line for bw_smoothImage is `node bisweb.js smoothImage`. The script bw_smoothImage contains the following three lines:
+_Note:_ An observant reader may have noticed that the actual command invoked by bw_smoothImage is `node bisweb.js smoothImage`. The script bw_smoothImage contains the following three lines:
 
     #!/bin/bash
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     node ${DIR}/../lib/bisweb.js smoothImage $@
 
-The second line identifies the location of the script and then based on this invokes the `bisweb.js` whose first argument is the name of the module to run. All modules are embedded in `bisweb.js`
+The script is just a small wrapper around this command.
 
 
 ### Using On Microsoft-Windows
