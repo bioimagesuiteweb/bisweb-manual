@@ -49,7 +49,7 @@ The application consists of the following parts:
 
   * `Movie` (appears in the case of 4D data) controls for playing a movie:
     * `Frames/s` -- set the movie frame rate in frames/second.
-
+    * `Play Movie` -- toggle to enable movie playback of the data.
 
 * I. `Viewer Snapshot` tool. It can be used to save a snapshot of the current viewer in a png file. The three sub controls are:
   *  `Scale` -- sets the size of the image in voxels relative to the size of the viewer. For publication quality set this to 'x5' (five times) or higher.
