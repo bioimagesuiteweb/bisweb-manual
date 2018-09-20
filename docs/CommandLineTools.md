@@ -4,7 +4,7 @@
 
 In addition to [web-based applications](https://bioimagesuiteweb.github.io/webapp/) and desktop applications, BioImage Suite modules can be accessed as command line applications, which is useful for batch-style processing. You may download the command line tools from [our download webpage](http://bisweb.yale.edu/binaries/binaries.html). The download is a single multiplatform package that works on MacOS, Windows, and Ubuntu Linux. The only dependency is [Node.js 8.x](https://nodejs.org/en/).
 
-_Note:_ A modern web browser consists of two main parts: (i) the web page rendering engine and (ii) the JavaScript engine. Node.js is based on V8, the JavaScript engine built into Google Chrome. This means that the back end of the command line tools in BioImage Suite Web are more or less the same as those in the browser.
+_Note:_ Roughly speaking, a modern web browser consists of two parts: (i) the web page rendering engine and (ii) the JavaScript engine. Node.js is based on V8, the JavaScript engine built into Google Chrome. This means that the back end of the command line tools in BioImage Suite Web are more or less the same as those in the browser.
 
 ### Installing
 
@@ -15,7 +15,7 @@ Once the files are uncompressed, you should see the following inside the folder.
     bin  LICENSE        setpaths.bat  setpaths.sh
     lib  README_js.txt  setpaths.csh  winbin
 
-The actual tools are in the `lib` directory and consist of the JavaScript bundle file `bisweb.js` and the Web-Assembly library `libbiswasm.wasm`. These two files are technically all you need. The rest of the files are there to simplify calling these.
+The actual tools are in the `lib` directory and consist of the JavaScript bundle file `bisweb.js` and the Web-Assembly library `libbiswasm.wasm`. These two files are technically all you need: the rest of the files are there to simplify calling these.
 
 ### Using on Unix/MacOS
 
@@ -23,14 +23,13 @@ The first step is to add the tools to your path. The download bundle contains a 
 
     source /usr/local/bisweb/setpaths.sh
 
-__Replace /usr/local/bisweb__ with the location where you extracted the files if it differs. If you use the `csh/tcsh` shells, use `setpaths.csh` instead.
+Replace '/usr/local/bisweb' with the location where you extracted the files if necessary. If you use the csh/tcsh shells replace `setpaths.sh` with `setpaths.csh`. This will add the scripts to your path. 
 
-This adds the scripts to your path. As an example to run the smooth image
-script (and get its help page) type:
+As an example, to run the smooth image script and get its help page type:
 
     bw_smoothImage -h
 
-This results in an output of the form:
+This produces the following:
 
     ....
     .... Using node.js version 8.9.4 (OK)
@@ -57,22 +56,21 @@ This results in an output of the form:
         --silent            Run in silent mode (no output on the console)
         -h, --help          output usage information
 
-The first few lines (starting with '....' or ',,,,') describe the environment and then, we see the options.
 
-There are over 30 such tools in the `bin` directory, which exactly mirror tools that are available in the GUI:
+There are over 30 such tools in the `bin` directory that mirror the modules available in the web application.
 
 ![Command Line vs Web Applications](images/cmdlinevsweb.png)
 _Figure 1: The options for the command line version of linear registration and the options for the web version of linear registration._
 
-Here is a side-by-side view of the command line version of the linear registration  tool and the graphical-user interface version in a Web Application. Other than the format for specifying inputs, parameters and handling the output files, the the code is _identifical_ between the two versions.
+Here is a side-by-side view of the command line version of the linear registration tool and the graphical-user interface version in a Web Application. Other than the format for specifying inputs, parameters and handling the output files, the the code is _identifical_ between the two versions.
 
-__Note:__ An observant reader may have noticed that the actual command line for bw_smoothImage is `node bisweb.js smoothImage`. The script bw_smoothImage contains the following three lines:
+_Note:_ An observant reader may have noticed that the actual command invoked by bw_smoothImage is `node bisweb.js smoothImage`. The script bw_smoothImage contains the following three lines:
 
     #!/bin/bash
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     node ${DIR}/../lib/bisweb.js smoothImage $@
 
-The second line identifies the location of the script and then based on this invokes the `bisweb.js` whose first argument is the name of the module to run. All these modules are embedded in `bisweb.js`
+The script is just a small wrapper around this command.
 
 
 ### Using On Microsoft-Windows

@@ -36,20 +36,15 @@ The application consists of the following parts:
     * `Reset Slices` -- resets the viewer to default 'zooms'.
     * `Z-` and `Z+` -- buttons perform zoom in and out operations. You may also zoom using the mouse wheel in the usual way.
     * `?` -- shows the current image information ('See H'). 
-  * `Image Color Mapping` controls set the windowing for the anatomical/background image: 
+  * `Image Color Mapping` (See 'G') controls set the windowing for the anatomical/background image: 
     * `Min Int` -- intensity values below this value are set to black (and also fully transparent).
     * `Max Int` -- intensiry values above this value are saturated to white.
     * `Interpolate` -- flag can be used to allow WebGL interpolation or not (smoother images vs being able to see the actual voxels).
     * `Auto-Contrast` -- toggle enables automatic windowing, if desired.
-  * `Overlay Color Mapping` ('See G') (appears if an overlay image is loaded) controls to adjust the overlay/functional image display properties:
-    * `Opacity` -- adjusts the translucency of the overlay image.
-    * `Overlay Type` -- selects the coloring scheme for the overlay. Depending upon the type selected, the following options will be displayed:
-      * `Min Overlay` -- overlay intensity values below this value are set to black (and also fully transparent).
-      * `Max Overlay` -- overlay intensity values above this value are saturated to the full color selected.
-
+  * `Overlay Color Mapping` (appears if an overlay image is loaded) controls to adjust the overlay/functional image display properties. See the [Overlay Viewer Application](overlayviewer.md) for more details.
   * `Movie` (appears in the case of 4D data) controls for playing a movie:
     * `Frames/s` -- set the movie frame rate in frames/second.
-
+    * `Play Movie` -- toggle to enable movie playback of the data.
 
 * I. `Viewer Snapshot` tool. It can be used to save a snapshot of the current viewer in a png file. The three sub controls are:
   *  `Scale` -- sets the size of the image in voxels relative to the size of the viewer. For publication quality set this to 'x5' (five times) or higher.
