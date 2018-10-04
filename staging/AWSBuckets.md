@@ -11,9 +11,43 @@ The first step to creating a bucket is to create an Amazon AWS account at [the f
 ![](./AWSBucketsImages/AWSCreateNewAWSAccountButton.png)
 _Figure 1: The two screens you will see on your way to creating an AWS Account_
 
+<a name="identity-pool"></a>
+### Identity Pool
+
+An Identity Pool associates a particular account with a particular application and provides credentials to allow its users authenticated access to its resources. In this case, your Identity Pool will allow BioImageSuite to know that it's you or another authenticated person attempting to access resources in your bucket. 
+
+Start by finding the Cognito item in the Amazon AWS dashboard (the screen that displays when you log into the Amazon AWS console), then select 'Manage Identity Pools' once inside. 
+
+
+![](./AWSBucketsImages/CognitoSelection.png)
+_Figure 6: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
+
+
+![](./AWSBucketsImages/CognitoIdentityPoolScreen.png)
+_Figure 7: The Amazon Cognito main menu._
+
+Create your Identity Pool selecting Cognito as the identity provider. Enter the following:
+
+* the BioImageSuite User Pool ID — us-east-1_BAOsizFzq  
+* The BioImageSuite App Client ID — 5edh465pitl9rb04qbi37csv8e. 
+
+This will associate your identity pool with BioImageSuite.
+
+
+![](./AWSBucketsImages/IdentityPoolPage.png)
+_Figure 8: The identity pool creation page with the relevant authentication provider sections highlighted._
+
+The last step is to create your authentication roles, [which are referenced in the Bucket Policy](#bucket-policy). These names can be anything you'd like but it's recommended to leave the defaults. Note that BioImageSuite uses only the authenticated role, not the unauthenticated role.
+
+
+![](./AWSBucketsImages/IdentityPoolRolePage.png)
+_Figure 9: The Identity Pool role page, with the relevant role highlighted in red._
+
+
+
 ## Creating an S3 Bucket
 
-Once you've created an AWS account, find S3 on the console's dashboard and click the link. 
+Find S3 on the console's dashboard and click the link. 
 
 ![](./AWSBucketsImages/S3ConsoleScreen.png)
 _Figure 2: The AWS Console with the S3 button highlighted._
@@ -60,7 +94,7 @@ We will have to create an Identity Pool associated with BioImageSuite for you. O
 
 The parts of the policy surrounded by carats will need to be replaced by values relevant to your bucket and values specific to the BioImageSuite User Pools that cannot be published here. 
 
-* <ACCOUNT_ID> designates the account id of the owner of the BioImageSuite app User Pool (contact Zach Saltzman for more information or to have your bucket added to S3). 
+* <ACCOUNT_ID> designates your Account Id. See [Appendix B](#appendix_b) for more information.
 
 * <COGNITO_IDENTITY_POOL_AUTH_ROLE> designates the name of the authentication role that will be created along with your identity pool. See [the section about identity pools](#identity-pool) for more information.
 
@@ -94,34 +128,6 @@ The Bucket Policy controls what resources external to S3 can access the bucket b
     </CORSRule>
     </CORSConfiguration>
 
-<a name="identity-pool"></a>
-### Identity Pool
-
-An Identity Pool associates a particular account with a particular application and provides credentials to allow its users authenticated access to its resources. In this case, your Identity Pool will allow BioImageSuite to know that it's you or another authenticated person attempting to access resources in your bucket. 
-
-Start by finding the Cognito item in the Amazon AWS dashboard (the screen that displays when you log into the Amazon AWS console), then select 'Manage Identity Pools' once inside. 
-
-
-![](./AWSBucketsImages/CognitoSelection.png)
-_Figure 6: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
-
-
-![](./AWSBucketsImages/CognitoIdentityPoolScreen.png)
-_Figure 7: The Amazon Cognito main menu._
-
-Create your Identity Pool selecting Cognito as the identity provider. For the User Pool ID, enter the BioImageSuite User Pool ID (us-east-1_BAOsizFzq) and App Client ID (5edh465pitl9rb04qbi37csv8e). This will associate your identity pool with BioImageSuite.
-
-
-![](./AWSBucketsImages/IdentityPoolPage.png)
-_Figure 8: The identity pool creation page with the relevant authentication provider sections highlighted._
-
-The last step is to create your authentication roles, [which are referenced in the Bucket Policy](#bucket-policy). These names can be anything you'd like but it's recommended to leave the defaults. Note that BioImageSuite uses only the authenticated role, not the unauthenticated role.
-
-
-![](./AWSBucketsImages/IdentityPoolRolePage.png)
-_Figure 9: The Identity Pool role page, with the relevant role highlighted in red._
-
-
 ## Conclusion
 
 Once these steps are complete your bucket may be accessed through the AWS Bucket Selector within BioImageSuite. This will require you to enter your Identity Pool ID and Bucket Name the first time you add the bucket, but these settings will be retained in the browser cache afterwards. Happy processing!
@@ -150,3 +156,13 @@ _Figure 12: The dashboard for an Identity Pool and where to click to display its
 
 ![](./AWSBucketsImages/IdentityPoolIDScreen.png)
 _Figure 13: Where to find the ID associated with the Identity Pool. Note that this one has been blurred out, but yours will be here._
+
+### Appendix B: Finding your Account ID
+
+Click the tab labeled with your username in the top right of the Amazon S3 console and select 'My Account'. Your Account ID will be displayed at the top, under the Account Settings tab.
+
+![](./AWSBucketsImages/AWSAccountTab.png)
+_Figure 14: The tab that contains the 'My Account' item. Note that in your AWS console, this will be your name._
+
+![](./AWSBucketsImages/AWSAccountPage.png)
+_Figure 15: Your Account ID on the 'My Account' page. Your other details will appear here, but have been blurred out here for privacy reasons._
