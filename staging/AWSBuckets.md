@@ -11,34 +11,79 @@ The first step to creating a bucket is to create an Amazon AWS account at [the f
 ![](./AWSBucketsImages/AWSCreateNewAWSAccountButton.png)
 _Figure 1: The two screens you will see on your way to creating an AWS Account_
 
-<a name="identity-pool"></a>
-### Identity Pool
+
+For BioImageSuite to use your AWS account you will need to do the following:
+
+* Create a User Pool
+    * Create an App Web Domain in your User Pool
+* Create an Identity Pool
+* Create an S3 Bucket
+    * Configure your S3 Bucket's Bucket Policy
+    * Configure your S3 Bucket's Cross Origin Request Sharing (CORS) Policy
+
+This is quite a few steps, but once configured, you should not need to change any of these settings. We break each step down in detail in the following sections. 
+
+## Creating a User Pool
+
+A User Pool associates your bucket with a particular group of users. Additionally, it can provide an App Client that will handle registration, sign-in, and forgotten passwords. We will need both of these features to use AWS features in BioImage Suite.
+
+Start by finding the Cognito item in the Amazon AWS dashboard (the screen that displays when you log into the Amazon AWS console), then select 'Manage User Pools' once inside.
+
+![](./AWSBucketsImages/CognitoSelection.png)
+_Figure 2: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
+
+![](./AWSBucketsImages/CognitoUserPoolScreen.png)
+_Figure 3: The Amazon Cognito main menu._
+
+Step through the options of creating your User Pool. These are fairly self-explanatory and most don't matter for the purposes of BioImage Suite; however, one option must be configured — the App clients.
+
+### The App Client 
+Once you are at the App client screen, click 'Add an app client' and fill out a name for your App client. You may change the other options for your app client if you would like, but BioImage Suite is designed to run with the defaults — be careful of 'Only allow Custom Authentication' in particular! Once you are finished, select 'Create app client'.
+
+![](./AWSBucketsImages/AWSAppClientInput.png)
+_Figure 4: The app client input screen that will appear once you click 'Add an app client'._
+
+Once you are finished configuring your User Pool's settings, you will be shown a screen that will let you review your choices. If you are satisfied, click 'Create pool'. This will return you to the main User Pool screen. 
+
+There is one more step required to configure the App client. Find the pool you just created in the main User Pool screen and select its tile. Find 'App client settings' in the sidebar and fill out the 'Callback URL(s)' field under 'Sign in and sign out URLs' with the following line: 
+
+    http://localhost:8080/build/web/biswebaws.html,
+    https://bioimagesuiteweb.github.io/unstableapp/biswebaws.html, https://git.yale.edu/pages/zls5/webapp/biswebaws.html
+
+
+For more information on the App client, you may consult the [following page from the AWS documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html). 'Sign out URL(s)' are currently not used by BioImage Suite so you may leave this blank.  
+
+<a name="app-client"></a>
+While on this screen, also note the App client ID listed near the top of the page. You will need it to create your Identity Pool.
+
+![](./AWSBucketsImages/UserPoolTiles.png)
+_Figure 5: The main User Pool screen. Note that the tiles on this screen will have different names depending on what you named your User Pools, so you should select the tile with the name that you assigned to your User Pool._
+
+![](./AWSBucketsImages/AppClientConfig.png)
+_Figure 6: The app client settings screen. Select the option highlighted in the sidebar on the left and then enter the Callback URLs listed above into the highlighted field. The App client ID is also highlighted here, but the ID itself is blurred out._ 
+
+
+<a name="#identity-pool"></a>
+## Creating an Identity Pool
 
 An Identity Pool associates a particular account with a particular application and provides credentials to allow its users authenticated access to its resources. In this case, your Identity Pool will allow BioImageSuite to know that it's you or another authenticated person attempting to access resources in your bucket. 
 
 Start by finding the Cognito item in the Amazon AWS dashboard (the screen that displays when you log into the Amazon AWS console), then select 'Manage Identity Pools' once inside. 
 
-
-![](./AWSBucketsImages/CognitoSelection.png)
-_Figure 6: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
-
-
-![](./AWSBucketsImages/CognitoIdentityPoolScreen.png)
-_Figure 7: The Amazon Cognito main menu._
-
 Create your Identity Pool selecting Cognito as the identity provider. Enter the following:
 
-* the BioImageSuite User Pool ID — us-east-1_BAOsizFzq  
-* The BioImageSuite App Client ID — 5edh465pitl9rb04qbi37csv8e. 
+* Your User Pool ID — This should be the ID of the User Pool you just created. This is found on the General settings page of your User Pool, which you may go to by selecting the 'General Settings' item in the side bar. 
+* Your App Client ID — The ID of the App client you created alongside the User Pool. You may find more information on how to find this in the section above. 
 
 This will associate your identity pool with BioImageSuite.
 
-
-![](./AWSBucketsImages/IdentityPoolPage.png)
-_Figure 8: The identity pool creation page with the relevant authentication provider sections highlighted._
+![](./AWSBucketsImages/UserPoolIdScreen.png)
+_Figure 7: The General Settings screen for your User Pool, with the menu item and ID field highlighted._
 
 The last step is to create your authentication roles, [which are referenced in the Bucket Policy](#bucket-policy). These names can be anything you'd like but it's recommended to leave the defaults. Note that BioImageSuite uses only the authenticated role, not the unauthenticated role.
 
+![](./AWSBucketsImages/IdentityPoolPage.png)
+_Figure 8: The identity pool creation page with the relevant authentication provider sections highlighted._
 
 ![](./AWSBucketsImages/IdentityPoolRolePage.png)
 _Figure 9: The Identity Pool role page, with the relevant role highlighted in red._
@@ -50,12 +95,12 @@ _Figure 9: The Identity Pool role page, with the relevant role highlighted in re
 Find S3 on the console's dashboard and click the link. 
 
 ![](./AWSBucketsImages/S3ConsoleScreen.png)
-_Figure 2: The AWS Console with the S3 button highlighted._
+_Figure 10: The AWS Console with the S3 button highlighted._
 
 Once in the main S3 menu, click the 'Create bucket' button and follow the prompts to configure your bucket. Note that BioImageSuite does not currently support encrypted buckets, but this may change in a future release. 
 
 ![](./AWSBucketsImages/S3BucketCreator.png)
-_Figure 3: The 'Create Bucket' button and the prompt it will open._
+_Figure 11: The 'Create Bucket' button and the prompt it will open._
 
 Once the bucket is created you will need to set two properties to allow it to work BioImageSuite: the Bucket Policy and the CORS configuration.
 
@@ -109,7 +154,7 @@ _Figure 4: The bucket policy screen found under Permissions->Bucket Policy, with
 ### CORS Configuration
 
 ![](./AWSBucketsImages/AWSCORSEditor.png)
-_Figure 5: The CORS Editor screen, accessible through Preferences->CORS Configuration from the S3 dashboard._
+_Figure 12: The CORS Editor screen, accessible through Preferences->CORS Configuration from the S3 dashboard._
 
 The Bucket Policy controls what resources external to S3 can access the bucket by authenticating users and specifying which users can do what. The CORS (Cross-Origin Resource Sharing) Configuration defines exceptions to a security policy known as the [Same Origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy) that is common to all applications that live on the web.
 
@@ -134,7 +179,7 @@ Once these steps are complete your bucket may be accessed through the AWS Bucket
 
 
 ![](./AWSBucketsImages/AWSSelector.png)
-_Figure 10: The BioImageSuite AWS Bucket selector, accessible through Help->AWS Selector_
+_Figure 13: The BioImageSuite AWS Bucket selector, accessible through Help->AWS Selector_
 
 
 ## Appendices
@@ -147,22 +192,22 @@ The first step is to go to the AWS dashboard find your list of Identity Pools (s
 
 
 ![](./AWSBucketsImages/IdentityPoolSelection.png)
-_Figure 11: The Identity Pool Selection Screen. If, for example, "bisweb test identity pool 2" was the Identity Pool associated with your S3 Bucket, this would be where you click._
+_Figure 14: The Identity Pool Selection Screen. If, for example, "bisweb test identity pool 2" was the Identity Pool associated with your S3 Bucket, this would be where you click._
 
 
 ![](./AWSBucketsImages/EditIdentityPool.png)
-_Figure 12: The dashboard for an Identity Pool and where to click to display its settings._
+_Figure 15: The dashboard for an Identity Pool and where to click to display its settings._
 
 
 ![](./AWSBucketsImages/IdentityPoolIDScreen.png)
-_Figure 13: Where to find the ID associated with the Identity Pool. Note that this one has been blurred out, but yours will be here._
+_Figure 16: Where to find the ID associated with the Identity Pool. Note that this one has been blurred out, but yours will be here._
 
 ### Appendix B: Finding your Account ID
 
 Click the tab labeled with your username in the top right of the Amazon S3 console and select 'My Account'. Your Account ID will be displayed at the top, under the Account Settings tab.
 
 ![](./AWSBucketsImages/AWSAccountTab.png)
-_Figure 14: The tab that contains the 'My Account' item. Note that in your AWS console, this will be your name._
+_Figure 17: The tab that contains the 'My Account' item. Note that in your AWS console, this will be your name._
 
 ![](./AWSBucketsImages/AWSAccountPage.png)
-_Figure 15: Your Account ID on the 'My Account' page. Your other details will appear here, but have been blurred out here for privacy reasons._
+_Figure 18: Your Account ID on the 'My Account' page. Your other details will appear here, but have been blurred out here for privacy reasons._
