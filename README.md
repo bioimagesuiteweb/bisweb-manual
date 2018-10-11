@@ -63,7 +63,7 @@ DONE    1. Image Processing Tools
     * Local File Server
     * Landmark Control
  
-9. BioImage Suite PWS
+9. BioImage Suite PWA
     * Offline Use
     * Caching
     * Careful
