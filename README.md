@@ -19,36 +19,6 @@ The files in this repository are used to generate the online documentation that 
 
 0. Roadmap
 
-DONE    1. Image Processing Tools
-
-        * Input and Output (single v dual viewer, image v overlay)
-        * Describe the tools
-
-2. Segmentation Tools
-
-    * Mostly described in image editor
-
-3. Registration Tools
-
-    * Some examples of manual registration
-    * Transformation formats
-    * Transformation control
-    * Reslice
-    * Linear
-    * Non-Linear
-    * Project
-    * Back Project
-    * Motion Correction
-
-    * Evaluating registration, side-by-side view
-
-4. Application Level
-    * Save State/Load State
-    * Copy/Paste Viewer
-
-5. Dual Viewer Specifics
-    * Transfer Images
-    * Display v1, v2, slider etc.
 
 6. Paravision Import Tool
 
