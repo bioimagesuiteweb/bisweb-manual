@@ -4,20 +4,17 @@ BioImageSuite Web is capable of reading files from a user's AWS Buckets, but con
 
 ## Creating an AWS Account 
 
-The first step to creating a bucket is to create an Amazon AWS account at [the following link](https://aws.amazon.com/console/). Click the 'Sign In to the Console' button at the top right then click 'Create a new AWS account' just below the blue 'Sign in' button. This will begin a tutorial that will guide you through the process of creating a new AWS Account. Bear in mind that this may require linking a credit card, though what BioImageSuite requires shouldn't exceed the free usage limits.
-
-![](./AWSBucketsImages/AWSConsoleSignInButton.png)
-
-![](./AWSBucketsImages/AWSCreateNewAWSAccountButton.png)
-_Figure 1: The two screens you will see on your way to creating an AWS Account_
+The first step to creating a bucket is to create an Amazon AWS account at [the following link](https://portal.aws.amazon.com/billing/signup#/start) (more information about AWS account may be found [here](https://aws.amazon.com/account/)). After entering your account information in the signup screen, follow the tutorial to finish creating your account. Bear in mind that this may require linking a credit card, though what BioImageSuite requires shouldn't exceed the free usage limits.
 
 
 For BioImageSuite to use your AWS account you will need to do the following:
 
-* Create a User Pool
-    * Create an App Web Domain in your User Pool
+* Create a User Pool:
+    * Create and configure the pool itself
+    * Create an App Web Domain within the pool
 * Create an Identity Pool
 * Create an S3 Bucket
+    * Create ad configure the bucket itself
     * Configure your S3 Bucket's Bucket Policy
     * Configure your S3 Bucket's Cross Origin Request Sharing (CORS) Policy
 
@@ -30,18 +27,18 @@ A User Pool associates your bucket with a particular group of users. Additionall
 Start by finding the Cognito item in the Amazon AWS dashboard (the screen that displays when you log into the Amazon AWS console), then select 'Manage User Pools' once inside.
 
 ![](./AWSBucketsImages/CognitoSelection.png)
-_Figure 2: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
+_Figure 1: The Amazon Cognito menu item on the dashboard (located all the way down the page)._
 
 ![](./AWSBucketsImages/CognitoUserPoolScreen.png)
-_Figure 3: The Amazon Cognito main menu._
+_Figure 2: The Amazon Cognito main menu._
 
 Step through the options of creating your User Pool. These are fairly self-explanatory and most don't matter for the purposes of BioImage Suite; however, one option must be configured — the App clients.
 
 ### The App Client 
-Once you are at the App client screen, click 'Add an app client' and fill out a name for your App client. You may change the other options for your app client if you would like, but BioImage Suite is designed to run with the defaults — be careful of 'Only allow Custom Authentication' in particular! Once you are finished, select 'Create app client'.
+Once you are at the App client screen, click 'Add an app client' and fill out a name for your App client. You may change the other options for your app client if you would like, but BioImage Suite is designed to run with the defaults — be careful not to check 'Only allow Custom Authentication' in particular! Once you are finished, select 'Create app client'.
 
 ![](./AWSBucketsImages/AWSAppClientInput.png)
-_Figure 4: The app client input screen that will appear once you click 'Add an app client'._
+_Figure 3: The app client input screen that will appear once you click 'Add an app client'._
 
 Once you are finished configuring your User Pool's settings, you will be shown a screen that will let you review your choices. If you are satisfied, click 'Create pool'. This will return you to the main User Pool screen. 
 
@@ -57,10 +54,10 @@ For more information on the App client, you may consult the [following page from
 While on this screen, also note the App client ID listed near the top of the page. You will need it to create your Identity Pool.
 
 ![](./AWSBucketsImages/UserPoolTiles.png)
-_Figure 5: The main User Pool screen. Note that the tiles on this screen will have different names depending on what you named your User Pools, so you should select the tile with the name that you assigned to your User Pool._
+_Figure 4: The main User Pool screen. Note that the tiles on this screen will have different names depending on what you named your User Pools, so you should select the tile with the name that you assigned to your User Pool._
 
 ![](./AWSBucketsImages/AppClientConfig.png)
-_Figure 6: The app client settings screen. Select the option highlighted in the sidebar on the left and then enter the Callback URLs listed above into the highlighted field. The App client ID is also highlighted here, but the ID itself is blurred out._ 
+_Figure 5: The app client settings screen. Select the option highlighted in the sidebar on the left and then enter the Callback URLs listed above into the highlighted field. The App client ID is also highlighted here, but the ID itself is blurred out._ 
 
 
 <a name="#identity-pool"></a>
@@ -78,15 +75,15 @@ Create your Identity Pool selecting Cognito as the identity provider. Enter the 
 This will associate your identity pool with BioImageSuite.
 
 ![](./AWSBucketsImages/UserPoolIdScreen.png)
-_Figure 7: The General Settings screen for your User Pool, with the menu item and ID field highlighted._
+_Figure 6: The General Settings screen for your User Pool, with the menu item and ID field highlighted._
 
 The last step is to create your authentication roles, [which are referenced in the Bucket Policy](#bucket-policy). These names can be anything you'd like but it's recommended to leave the defaults. Note that BioImageSuite uses only the authenticated role, not the unauthenticated role.
 
 ![](./AWSBucketsImages/IdentityPoolPage.png)
-_Figure 8: The identity pool creation page with the relevant authentication provider sections highlighted._
+_Figure 7: The identity pool creation page with the relevant authentication provider sections highlighted._
 
 ![](./AWSBucketsImages/IdentityPoolRolePage.png)
-_Figure 9: The Identity Pool role page, with the relevant role highlighted in red._
+_Figure 8: The Identity Pool role page, with the relevant role highlighted in red._
 
 
 
@@ -95,12 +92,12 @@ _Figure 9: The Identity Pool role page, with the relevant role highlighted in re
 Find S3 on the console's dashboard and click the link. 
 
 ![](./AWSBucketsImages/S3ConsoleScreen.png)
-_Figure 10: The AWS Console with the S3 button highlighted._
+_Figure 9: The AWS Console with the S3 button highlighted._
 
 Once in the main S3 menu, click the 'Create bucket' button and follow the prompts to configure your bucket. Note that BioImageSuite does not currently support encrypted buckets, but this may change in a future release. 
 
 ![](./AWSBucketsImages/S3BucketCreator.png)
-_Figure 11: The 'Create Bucket' button and the prompt it will open._
+_Figure 10: The 'Create Bucket' button and the prompt it will open._
 
 Once the bucket is created you will need to set two properties to allow it to work BioImageSuite: the Bucket Policy and the CORS configuration.
 
@@ -149,7 +146,7 @@ More information about what setting a Bucket Policy can do can be found in the [
 
 
 ![](./AWSBucketsImages/BucketPolicyScreen.png)
-_Figure 4: The bucket policy screen found under Permissions->Bucket Policy, with the Bucket Policy button and policy editor screen outlined in red. Note that the editor itself is blurred to hide certain information_
+_Figure 11: The bucket policy screen found under Permissions->Bucket Policy, with the Bucket Policy button and policy editor screen outlined in red. Note that the editor itself is blurred to hide certain information_
 
 ### CORS Configuration
 
