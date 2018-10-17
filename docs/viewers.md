@@ -2,7 +2,7 @@
 
 All BioImage Suite web applications share components and have a similar user interface. All viewers in BioImage Suite Web can display two images:
 
-1. The "underlay" or "background" image — This is often the anatomical image and be loaded and saved from the `File` Menu.
+1. The "underlay" or "background" image — This is often the anatomical image and can be loaded and saved from the `File` Menu.
 2. The "overlay" or "objectmap" image — This is often a functional image or segmentation image. This can be loaded and saved from the `Overlay` menu.
 
 
