@@ -1,24 +1,43 @@
 # BioImage Suite's File Server
 
-Applications run from the browser are only able to access a local filesystem at a fairly primitive level — the user must select an item to load manually and confirm that they want the browser to load it. The interface is so limited for security reasons, as if the browser could inspect the file system without any check, it would be trivial for a malicious script to download private files and send them to an arbitrary destination. 
+Applications run from the browser are only able to access a local filesystem at a fairly primitive level — the user must select an item to load manually and confirm that they want the browser to load it. Saving is even more restricted. When saving the application is restricted to creating a "download" object which the user may choose to save or ignore. The application is never told of the outcome. (Aside: a consequence of this is that when you try to save an image in BISWEB, the hard work is done before you select the filename, as the software needs to create the `download`. That is why, when saving large files to disk, it takes a while for the file dialog to appear.)
+
+ The interface is  limited for security reasons, as if the browser could inspect the file system without any check, it would be trivial for a malicious script to download private files and send them to an arbitrary destination. 
 
 This restriction would be particularly onerous when running image processing pipelines that require saving and loading dozens of images at each step: the user would need to accept the request for each file manually and drag it into the application. The BioImage Suite file server is designed to circumvent this limitation by uploading and downloading data from the server through a trusted link. 
 
-The server itself is a [Node](https://nodejs.org/en/) process that you must connect and authenticate with before the server will accept data. We will cover how to run the server and configure BioImage Suite to use it as its source in the sections below.
+The server itself is a [Node.js](https://nodejs.org/en/) process that you must connect and authenticate with before the server will accept data. We will cover how to run the server and configure BioImage Suite to use it as its source in the sections below.
+
+
+## Getting the File Server
+
+__This section assumes that you have the ability to download and install software and run commands from a command line. On a Mac use the `Terminal` app. On Windows use the `Command Prompt` program.__
+
+You will first need to install `Node.js` vs 8. To do this go to the [Node.js download page](https://nodejs.org/en/download/) and download and install the appropriate version for your operating system. (As of Oct 2018, this is version 8.12). Next you need to download the BioImage Suite Web file server itself. The latest version of this can always be found at [this location](https://bioimagesuiteweb.github.io/webapp/server.zip). Alternatively you can get to it using the BioImage Suite Web graphical interface as shown below:
+
+![Donwload Link](Fileserverimages/getfileserver.png)
+
+Ppen the `Select file source` dialog from any application under the `Help` menu as shown above. Then click on the `from this link` link at the bottom of the selector. This will let you download the latest version of the file server as a zip file.
+
+1. Unzip this zip file somewhere on your computer -- we will call this location `DIRECTORY`. 
+2. Open the command line (either `Terminal` on Mac or `Command Prompt` on Windows)
+3. Type `node -v` to ensure that you have a working version of node.js. You should get something like `v8.12.0`. If this gives an error __stop__ and make sure node.js is correctly installed.
+3. Navigate (`cd`) to the DIRECTORY containing the file `bisfileserver.js`.
+4. Next download the dependencies of the server using the `npm` utility (this should have been installed as part of node.js) by typing
+    npm update
+
+`npm update` may take a little time as this needs to download some packages. On Windows you will something similar to the figure below.
+
+![Windows Example](Fileserverimages/windowscmd.png)
 
 
 ## Running the File Server
 
-The File Server comes packaged with the rest of the BioImage Suite code, which you may clone from [this link](https://github.com/bioimagesuiteweb/bisweb) if you haven't already. Once you have the File Server code open a terminal window and enter the following:
+To run the file server, open a command line and navigate to the directory containing the file `bisfileserver.js` (see `Getting the File Server` above). Then you can run this by typing
 
-    cd ~/<NAME OF FOLDER CONTAINING BIOIMAGE SUITE>/bisweb/js/bin
-    node bisfileserver.js <OPTIONS> &
+    node bisfileserver.js <OPTIONS> 
 
-The first command will change the directory currently open in the terminal to the directory that contains the File Server starter process. The second command will start the process and set it to run in the background of your terminal (see [Closing the File Server](#closing-the-file-server) for info on how to terminate the server process).
-
-Note that the folder that contains BioImage Suite may not neccesarily be in your root directory. In that case substitute whatever location may be appropriate. 
-
-The options for the file server are as follows:
+The options (_all are optional!_) for the file server are as follows:
 
 Flag | Description | 
 -|-
@@ -26,7 +45,6 @@ Flag | Description |
  --readonly | If this flag is specified, the server will not accept requests to write files. 
 --insecure | If this flag is set, the server will not ask for a One-Time Password when you connect. As the name suggests, setting this flag may undermine the security of the files on your system, __use with care__.
 --verbose | Prints more detailed information from the server while it's running. 
---ipaddr <host_name> | Which host to connect to. Note that BioImage Suite may not support hosts besides 'localhost', i.e. your own computer. If this is not specified, the host name will be set to 'localhost'.
 --tmpdir <directory_name> | Which temporary directory to use, i.e. where the server will default to saving. 
 --config <file_name> | Whether the script that starts the BioImage Suite file server should read from a config file that may specify many options on the command line. This is helpful if you have a complex ipaddr, tmpdir, etc.
 --createconfig | Takes the options currently written on the command line, saves them in a file, then exits. For example, you might create a config file that will run in insecure mode by writing `node bisfileserver.js --insecure --createconfig`.
@@ -81,15 +99,7 @@ After clicking around a little the File Server dialog should look more like this
 <a ref='closing-the-file-server'></a>
 ## Closing the File Server
 
-Once you are done with file operations it's good to terminate the server. Leaving connections open carries [serious security risks](https://superuser.com/questions/82488/why-is-it-bad-to-have-open-ports), and we can't promise that the server is completely secure. Luckily, terminating the server is simple, simply enter the following in the terminal window you opened the server in: 
+Once you are done with file operations it's good to terminate the server. Leaving connections open carries [serious security risks](https://superuser.com/questions/82488/why-is-it-bad-to-have-open-ports), and we can't promise that the server is completely secure.
 
-    jobs 
-    kill %<JOB NUMBER>
-
-When you type jobs you will be presented a list of processes that have been opened in the terminal, similar to the figure below:
-
-![](./FileserverImages/FileserverJobList.png)
-_Figure 6: An example of a job list that might appear in your terminal window. In this case the job number would be 2._
-
-
-    
+1. Click in the terminal window where yo started the process.
+2. Press `Control-C`
