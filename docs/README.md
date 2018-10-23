@@ -29,8 +29,8 @@ The following documents describes advanced application functionality that is com
 <!--
 * [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
 * [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
+-->
 * [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
-!-->
 
 In addition to web applications, BioImage Suite web can be run as desktop applications. This is discussed in the following:
 
