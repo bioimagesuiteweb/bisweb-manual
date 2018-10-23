@@ -15,7 +15,7 @@ __This section assumes that you have the ability to download and install softwar
 
 You will first need to install `Node.js` vs 8. To do this go to the [Node.js download page](https://nodejs.org/en/download/) and download and install the appropriate version for your operating system. (As of Oct 2018, this is version 8.12). Next you need to download the BioImage Suite Web file server itself. The latest version of this can always be found at [this location](https://bioimagesuiteweb.github.io/webapp/server.zip). Alternatively you can get to it using the BioImage Suite Web graphical interface as shown below:
 
-![Donwload Link](./Fileserverimages/getfileserver.png)
+![Donwload Link](./FileserverImages/getfileserver.png)
 
 Open the `Select file source` dialog from any application under the `Help` menu as shown above. Then click on the `from this link` link at the bottom of the selector. This will let you download the latest version of the file server as a zip file.
 
@@ -28,7 +28,7 @@ Open the `Select file source` dialog from any application under the `Help` menu 
 
 `npm update` may take a little time as this needs to download some packages. On Windows you will something similar to the figure below.
 
-![Windows Example](./Fileserverimages/windowscmd.png)
+![Windows Example](./FileserverImages/windowscmd.png)
 
 
 ## Running the File Server
