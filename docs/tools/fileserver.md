@@ -17,7 +17,7 @@ You will first need to install `Node.js` vs 8. To do this go to the [Node.js dow
 
 ![Donwload Link](./Fileserverimages/getfileserver.png)
 
-Ppen the `Select file source` dialog from any application under the `Help` menu as shown above. Then click on the `from this link` link at the bottom of the selector. This will let you download the latest version of the file server as a zip file.
+Open the `Select file source` dialog from any application under the `Help` menu as shown above. Then click on the `from this link` link at the bottom of the selector. This will let you download the latest version of the file server as a zip file.
 
 1. Unzip this zip file somewhere on your computer -- we will call this location `DIRECTORY`. 
 2. Open the command line (either `Terminal` on Mac or `Command Prompt` on Windows)
