@@ -2,41 +2,42 @@
 
 First we conver some core information in this document:
 
-* [Starting BioImage Suite Web](#starting-bioimage-suite-web) -- how to get and run the software.
-* [Some Key Information](#some-key-information) -- information about configuring your browser and default image orientations.
+* [Starting BioImage Suite Web](#starting-bioimage-suite-web) — how to get and run the software.
+* [Some Key Information](#some-key-information) — information about configuring your browser and default image orientations.
 
 The following documents describe the different applications in BioImage Suite Web.
 
-* [Displaying Images](viewers.md) -- we discuss here how the core viewer in BioImage Suite web works (including colormapping etc.). This is shared by the almost all the applications.
-* [The Overlay Viewer Application](overlayviewer.md) -- an application optimized for displaying functional overlays, including a brief description of the Mosaic Viewer Tool included here.
-* [The Image Editor Application](imageeditor.md) -- an application that can be used for interactive segmentation and VOI analysis of images.
-* [The Connectivity Visualization Tool](tools/conncontrol.md) -- an application to visualize connectome matrices.
-* [The MNI2TAL Tool](tools/mni2tal.md) -- an application to map MNI to Talairach coordinates and 
+* [Displaying Images](viewers.md) — we discuss here how the core viewer in BioImage Suite web works (including colormapping etc.). This is shared by the almost all the applications.
+* [The Overlay Viewer Application](overlayviewer.md) — an application optimized for displaying functional overlays, including a brief description of the Mosaic Viewer Tool included here.
+* [The Image Editor Application](imageeditor.md) — an application that can be used for interactive segmentation and VOI analysis of images.
+* [The Connectivity Visualization Tool](tools/conncontrol.md) — an application to visualize connectome matrices.
+* [The MNI2TAL Tool](tools/mni2tal.md) — an application to map MNI to Talairach coordinates and 
 vice-versa.
-* [The Dual Viewer Tool](dualviewer.md) -- an advanced dual viewer application. This is intended to be primarily used for image registration tasks.
+* [The Dual Viewer Tool](dualviewer.md) — an advanced dual viewer application. This is intended to be primarily used for image registration tasks.
 
 These documents describe how to perform specific tasks in one or more of the applications in the software.
 
-* [Image Processing Tasks](tools/imageprocessing.md) -- here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
-* [Image Segmentation](tools/segmentationtools.md) -- this describes image segmentation functionality in our software.
-* [Image Registration](dualviewer.md) -- the image registration tools are described in the document describing the Dual Viewer application.
-* [Defacing Images](tools/defacing.md) -- an example of using the tools in BioImage Suite Web to deface a brain image.
+* [Image Processing Tasks](tools/imageprocessing.md) — here we describe how to perform basic image processing tasks (e.g. image thresholding, cropping, resampling) using the tools in BioImage Suite Web.
+* [Image Segmentation](tools/segmentationtools.md) — this describes image segmentation functionality in our software.
+* [Image Registration](dualviewer.md) — the image registration tools are described in the document describing the Dual Viewer application.
+* [Defacing Images](tools/defacing.md) — an example of using the tools in BioImage Suite Web to deface a brain image.
 
 The following documents describes advanced application functionality that is common among most of the applications. 
 
-* [Advanced Functionality](tools/advanced.md) -- this document describes advanced functionality such as (i) Loading and Saving the Application State], (ii) copying and pasteing viewer configurations accross applications and (iii) transfering images from viewer to viewer wihin an application.
-* [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
-* [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
-* [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
+* [Advanced Functionality](tools/advanced.md) — this document describes advanced functionality such as (i) Loading and Saving the Application State], (ii) copying and pasteing viewer configurations accross applications and (iii) transfering images from viewer to viewer wihin an application.
+* [Offline Mode](tools/pwa.md)  — this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
+* [Cloud File Access](tools/cloud.md) — BioImage Suite can read files from cloud sources directly
+* [Local Cloud — the BioImage Suite Web Local File Server](tools/fileserver.md) — this describes the local file server add on to BioImage Suite Web.
+* [Amazon AWS](./AWSBuckets.md) — this describes how to set up an AWS bucket to work with BioImage Suite Web.
 
 In addition to web applications, BioImage Suite web can be run as desktop applications. This is discussed in the following:
 
-* [Electron Applications](ElectronApps.md) -- this is a description of the [Electron-based](https://electronjs.org/) Desktop Applications in Biomage Suite Web.
-* [Command Line Tools](CommandLineTools.md) -- this is a description of the command line tools in BioImage Suite Web.
+* [Electron Applications](ElectronApps.md) — this is a description of the [Electron-based](https://electronjs.org/) Desktop Applications in Biomage Suite Web.
+* [Command Line Tools](CommandLineTools.md) — this is a description of the command line tools in BioImage Suite Web.
 
 The final document discusses running regression testing:
 
-* [Regression Testing](biswebtest.md) -- validating your own setup by running the regression test web application in BioImage Suite Web.
+* [Regression Testing](biswebtest.md) — validating your own setup by running the regression test web application in BioImage Suite Web.
 
 
 
