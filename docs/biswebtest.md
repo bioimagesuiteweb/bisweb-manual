@@ -1,10 +1,14 @@
-## Verifying BioImage Suite Web for your Environment
+# Verifying BioImage Suite Web for your Environment
 
 BioImage Suite, in a manner rare among software packages,
 allows users to run the regression tests on their own computers using the
 __pre-built__ version of the software. We provide a regression
 testing application (see below) from which a user can select tests and
 run them verify their own installation. This can help to detect problems between BioImage Suite and the user's browser, machine, operating system, etc. 
+
+---
+
+## Algorithmic Tests
 
 The tests are defined in a JSON file, an abbreviated entry of which is shown in Figure 2. For the curious, the complete list of tests can be downloaded [from this link](https://bioimagesuiteweb.github.io/webapp/test/module_tests.json).
 
@@ -17,13 +21,12 @@ Note that these same tests can be run from the command line from the BioImage Su
 
 There are over 85 tests as of 9/18/18.
  
----
 
 ### Running Regression Tests in the Browser
 
 First open the BioImageSuite Web Regression Testing Application from [https://bioimagesuiteweb.github.io/webapp/biswebtest.html](https://bioimagesuiteweb.github.io/webapp/biswebtest.html).
 
-## Selecting Which Tests to Run
+### Selecting Which Tests to Run
 
 ![test1](images/test1.png)
 _Figure 3: The opening screen of the BioImage Suite Web Regression Test Runner with the module list expanded._ 
@@ -40,9 +43,8 @@ Finally, the buttons `D` and `E` run the tests.
 * `D` : `Run Tests` — This runs the tests selected by the filtering controls `A` and `B`.
 * `E` : `Run Memory` — This runs the memory allocation test for WebAssembly (more on this below).
 
----
 
-## Running Module Tests
+### Running Module Tests
 
 ![test2](images/test2.png)
 _Figure 4: The results from a successfully tested module._
@@ -64,12 +66,21 @@ For some tests that take longer or generate more output, it might be useful to l
 _Figure 6: The webpage with the console expanded._
 
 
-## Running the Memory Test
+### Running the Memory Test
 
 This will verify that your browser has the ability to allocate upto 2GB of RAM for running the modules implemented in C++ and compiled as WebAssembly (see [this document from the source tree](https://github.com/bioimagesuiteweb/bisweb/blob/master/docs/JStoWASM.md) for more information.) 
 
 ![memtest](images/test5.png)
 _Figure 7: The output of a successful memory test._
 
+---
 
 
+## Display Tests
+
+BioImage Suite Web also has two sets of display tests that work in a similar mannner. You may access these as follows:
+
+* [Image Visualization](https://bioimagesuiteweb.github.io/webapp/biswebdisplaytest.html) -- these test the viewer display, including image overlays as shown using the [Overlay Viewer](./overlayviewer.md)
+* [Connectivity Visualization](https://bioimagesuiteweb.github.io/webapp/biswebdisplaytest2.html) -- these test the visualization aspects of the [Connectivity viewer](./tools/conncontrol.md).
+
+Both of these controls essentially leverage the same functionality described in the [Live Figures](./livefigures/livefigures.md) to reload the viewer state and recreate a previous visualization.
