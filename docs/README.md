@@ -54,7 +54,6 @@ _This document represents work in progress._
 
 
 ---
----
 
 ### Starting BioImage Suite Web
 
