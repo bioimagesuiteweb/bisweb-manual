@@ -26,12 +26,12 @@ These documents describe how to perform specific tasks in one or more of the app
 The following documents describes advanced application functionality that is common among most of the applications. 
 
 * [Advanced Functionality](tools/advanced.md) -- this document describes advanced functionality such as (i) Loading and Saving the Application State], (ii) copying and pasteing viewer configurations accross applications and (iii) transfering images from viewer to viewer wihin an application.
-<!--
 
+<!--
 * [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
 * [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
-
 -->
+
 * [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
 * [Amazon AWS](tools/AWSBuckets.md) — this describes how to access data in an Amazon S3 bucket from within BioImage Suite.
 
