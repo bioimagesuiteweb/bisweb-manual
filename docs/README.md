@@ -30,10 +30,12 @@ The following documents describes advanced application functionality that is com
 <!--
 * [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
 * [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
+* [Amazon AWS](tools/AWSBuckets.md) — this describes how to access data in an Amazon S3 bucket from within BioImage Suite.
+
 -->
 
 * [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
-* [Amazon AWS](tools/AWSBuckets.md) — this describes how to access data in an Amazon S3 bucket from within BioImage Suite.
+
 
 In addition to web applications, BioImage Suite web can be run as desktop applications. This is discussed in the following:
 
