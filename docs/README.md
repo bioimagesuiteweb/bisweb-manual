@@ -3,7 +3,11 @@
 First we conver some core information in this document:
 
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) — how to get and run the software.
-* [Some Key Information](#some-key-information) — information about configuring your browser and default image orientations.
+* [Some Key Information](#some-key-information) — information about
+  configuring your browser and default image orientations.
+* We provide tutorial videos at out
+  [YouTube Channel](https://www.youtube.com/channel/UCizfR_ryJ0E-2uZspjwYtwg). We
+  will be adding to this over time.
 
 The following documents describe the different applications in BioImage Suite Web.
 
