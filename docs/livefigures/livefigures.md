@@ -1,7 +1,10 @@
 
 # Live Figures
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zWS68aOWUBQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p align="center">
+<iframe width="695" height="391" 
+src="https://www.youtube.com/embed/zWS68aOWUBQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
 ---
 
 
