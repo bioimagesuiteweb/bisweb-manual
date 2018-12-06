@@ -7,8 +7,9 @@ _Note:_ If you need help with the basics of BioImage Suite Web's viewers, please
 
 The following short video illustrates the process:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a8Cbs4SJABs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<p align="center">
+<iframe width="695" height="391" src="https://www.youtube.com/embed/a8Cbs4SJABs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
 ---
 
 ## Method 1 — Simple Version
