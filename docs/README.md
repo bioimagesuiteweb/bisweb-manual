@@ -6,7 +6,7 @@
 
 ## Table Of Contents
 
-First we conver some core information in this document:
+This document contains:
 
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) — how to get and run the software.
 * [Some Key Information](#some-key-information) — information about
