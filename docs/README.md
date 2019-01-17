@@ -6,7 +6,7 @@
 
 ## Table Of Contents
 
-This document contains:
+This document contains the following:
 
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) — how to get and run the software.
 * [Some Key Information](#some-key-information) — information about
