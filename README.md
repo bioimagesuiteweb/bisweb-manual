@@ -1,6 +1,10 @@
+![Logo](https://bioimagesuiteweb.github.io/bisweb-manual/bisweb_newlogo_small.png)
+
+---
+
 ## BioImage Suite Web User Documentation Repository
 
-This repository contains the beginnings of the user documentation for
+This repository contains the user documentation for
 [BioImage Suite Web](https://bioimagesuiteweb.github.io/webapp/). A brief
 introduction to the software can be found in this
 [presentation](https://bioimagesuiteweb.github.io/webapp/images/BioImageSuiteWeb_NIHBrainInitiativeMeeting_April2018.pdf). If
