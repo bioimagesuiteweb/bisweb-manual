@@ -19,6 +19,7 @@ The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool s
 * The ability to edit the object maps using the `Paint Tool`.
 * Provision of selected set of modules for modifying object maps. These include `Create Objectmap`, `Morphology Operations`, `Regularize Objectmap`, and `Mask Image`.
 * The integration of the volume-of-interest (VOI) analysis tool that uses the current objectmap to analyze the underlying image. VOI analysis will work with both a timeseries and a static image. 
+* The ability to manually identify and localize landmarks with respect to the image data using the `Landmark Editor`.
 
 #### Creating an Objectmap
 
@@ -71,3 +72,25 @@ Given an image and an objectmap, we can generate plots of VOI image data. If the
 * `Close` — Closes the VOI Timeseries plotter window.
 
 
+
+#### Landmark Editor Tool
+
+_Figure 5: The Landmark Editor tool._
+
+The Landmark Editor provides functionality for manually identifying and localizing landmarks of interest within the imaging data. To invoke this control go to `Tools` -> `Landmark Editor`. By default, if no image data is loaded in the viewer, the Landmark Editor tools will be empty. The Landmark Editor tool has the following functionality:
+
+* `Current Set` - The Landmark Editor allows for up to five different sets of points to be recorded, each labeled `Point Set 1`,...,`Point Set 5`
+* `Sets to Display` - Selects which Point Set to display in the viewer. Choices are: (i) `Current` to display the currently selected Point Set (default), (ii) `All` to display all Point Sets, and (iii) `None` to display no landmarks.
+* `Enable Mouse` - Toggle to enable placement or editing of landmarks using the mouse.
+
+The `Current Landmark Options` operate on the currently selected Point Set in `CurrentSet`:
+* `Landmark` -
+* `Pick` -
+* `Undo` -
+* `Redo` -
+* `Delete` -
+* `Rename` -
+* `Delete All` -
+* `Display Properties` -
+* `Load` -
+* `Save` -
