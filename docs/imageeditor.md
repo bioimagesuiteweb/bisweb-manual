@@ -75,6 +75,7 @@ Given an image and an objectmap, we can generate plots of VOI image data. If the
 
 #### Landmark Editor Tool
 
+![Landmark Editor](images/landmarkeditor.png)
 _Figure 5: The Landmark Editor tool._
 
 The Landmark Editor provides functionality for manually identifying and localizing landmarks of interest within the imaging data. To invoke this control go to `Tools` -> `Landmark Editor`. By default, if no image data is loaded in the viewer, the Landmark Editor tools will be empty. The Landmark Editor tool has the following functionality:
