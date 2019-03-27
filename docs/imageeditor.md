@@ -84,9 +84,9 @@ The Landmark Editor provides functionality for manually identifying and localizi
 * `Sets to Display` - Selects which Point Set to display in the viewer. Choices are: (i) `Current` to display the currently selected Point Set (default), (ii) `All` to display all Point Sets, and (iii) `None` to display no landmarks.
 * `Enable Mouse` - Toggle to enable placement or editing of landmarks using the mouse.
 
-The `Current Landmark Options` operate on the currently selected Point Set in `CurrentSet`:
-* `Landmark` - Selects the currently 'active' landmark from the drop down list of landmarks, if any.
-* `Pick`/`Release` - Centers the image viewer crosshairs on the currently selected landmark in `Landmark`. If the `Enable Mouse` toggle is checked, pressing the `Pick` button will allow the landmark to be moved (a circle will appear around the landmark to indicate that it can be moved).  The `Release` button will appear to discontinue landmark location editing. 
+The `Current Landmark Options` operate on the currently selected Point Set in `Current Set`:
+* `Landmark` - Selects the currently 'active' landmark from the drop down list of landmarks, if any. Selecting a landmark centers the image viewer crosshairs on the currently selected landmark.
+* `Pick`/`Release` - The `Pick` button allows for editing landmark locations. If the `Enable Mouse` toggle is checked, pressing the `Pick` button will allow the landmark to be moved (a circle will appear around the landmark to indicate that it can be moved).  The `Release` button will appear to discontinue landmark location editing. 
 * `Undo` - Undo the last landmark operation.
 * `Redo` - Redo the previous landmark operation.
 * `Delete` - Deletes the currently selected landmark in `Landmark`.
