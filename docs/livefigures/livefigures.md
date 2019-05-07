@@ -1,6 +1,13 @@
 
 # Live Figures
 
+<p align="center">
+<iframe width="695" height="391" 
+src="https://www.youtube.com/embed/zWS68aOWUBQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
+---
+
+
 ## Usual Workflow for Saving Figures
 
 In general, researchers, once they are done with their analyses create figures (such as the own below) to show their results. These are static figures (e.g. png,tiff) and can not be examined in any way to look at other slices, or adjust the thresholds etc.
@@ -28,7 +35,7 @@ __Solution: Live Figures in BioImage Suite Web__
 
 We describe here a solution this problem: `Live Figures`. In BioImage Suite Web, we can create a `dynamic` or `live` figure that allows the recipient/viewer to interact with your results and examine them as if they were sitting at your workstation when you created the figure. We describe the procedure for these below. Naturally you can also create static figures by using the "Viewer Snapshot Tool"
 
-## How to create a live Figure
+## How to create a Live Figure
 
 This is the overall procedure:
 

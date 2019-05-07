@@ -1,9 +1,19 @@
+
+<p align="center">
+<iframe width="695" height="391" src="https://www.youtube.com/embed/CnbdaQ0O52k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+---
+
 ## Table Of Contents
 
-First we conver some core information in this document:
+This document contains:
 
 * [Starting BioImage Suite Web](#starting-bioimage-suite-web) — how to get and run the software.
-* [Some Key Information](#some-key-information) — information about configuring your browser and default image orientations.
+* [Some Key Information](#some-key-information) — information about
+  configuring your browser and default image orientations.
+* We provide tutorial videos via our
+  [YouTube Channel](https://www.youtube.com/channel/UCizfR_ryJ0E-2uZspjwYtwg). We
+  will be adding to this over time.
 
 The following documents describe the different applications in BioImage Suite Web.
 
@@ -26,14 +36,16 @@ These documents describe how to perform specific tasks in one or more of the app
 The following documents describes advanced application functionality that is common among most of the applications. 
 
 * [Advanced Functionality](tools/advanced.md) -- this document describes advanced functionality such as (i) Loading and Saving the Application State], (ii) copying and pasteing viewer configurations accross applications and (iii) transfering images from viewer to viewer wihin an application.
-<!--
 
+<!--
 * [Offline Mode](tools/pwa.md)  -- this describes the ability of BioImage Suite Web to run offline as a _progressive web application_.
 * [Cloud File Access](tools/cloud.md) -- BioImage Suite can read files from cloud sources directly
+* [Amazon AWS](tools/AWSBuckets.md) — this describes how to access data in an Amazon S3 bucket from within BioImage Suite.
 
 -->
+
 * [Local Cloud -- the BioImage Suite Web Local File Server](tools/fileserver.md) -- this describes the local file server add on to BioImage Suite Web.
-* [Amazon AWS](tools/AWSBuckets.md) — this describes how to access data in an Amazon S3 bucket from within BioImage Suite.
+
 
 In addition to web applications, BioImage Suite web can be run as desktop applications. This is discussed in the following:
 
@@ -51,7 +63,6 @@ __Note:__ This document and those linked to it contain the beginnings of the use
 _This document represents work in progress._
 
 
----
 ---
 
 ### Starting BioImage Suite Web

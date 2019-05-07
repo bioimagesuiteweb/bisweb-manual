@@ -5,7 +5,12 @@ Our implementation derives from [the OpenfMRI Project](https://github.com/poldra
 
 _Note:_ If you need help with the basics of BioImage Suite Web's viewers, please see [the intro to viewers](../viewers.md).
 
-___
+The following short video illustrates the process:
+
+<p align="center">
+<iframe width="695" height="391" src="https://www.youtube.com/embed/a8Cbs4SJABs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</p>
+---
 
 ## Method 1 — Simple Version
 

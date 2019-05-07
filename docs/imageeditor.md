@@ -1,6 +1,12 @@
 ## Image Editor
 
 
+<p align="center">
+<iframe width="695" height="391" 
+src="https://www.youtube.com/embed/UsjMONux0co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+----
+
 #### Introduction
 
 ![The Image Editor Tool](images/imageeditor.png)
@@ -13,6 +19,7 @@ The [Image Editor](https://bioimagesuiteweb.github.io/webapp/editor.html) tool s
 * The ability to edit the object maps using the `Paint Tool`.
 * Provision of selected set of modules for modifying object maps. These include `Create Objectmap`, `Morphology Operations`, `Regularize Objectmap`, and `Mask Image`.
 * The integration of the volume-of-interest (VOI) analysis tool that uses the current objectmap to analyze the underlying image. VOI analysis will work with both a timeseries and a static image. 
+* The ability to manually identify and localize landmarks with respect to the image data using the `Landmark Editor`.
 
 #### Creating an Objectmap
 
@@ -63,5 +70,31 @@ Given an image and an objectmap, we can generate plots of VOI image data. If the
 * `Export as CSV` — Outputs the data used in the plots as a comma-separated file (CSV) for import into Excel, Matlab, etc. for more detailed plotting.
 * `Save Snaphot` — Saves the current plot as a `.png` image file.
 * `Close` — Closes the VOI Timeseries plotter window.
+
+
+
+#### Landmark Editor Tool
+
+![Landmark Editor](images/landmarkeditor.png)
+_Figure 5: The Landmark Editor tool._
+
+The Landmark Editor provides functionality for manually identifying and localizing landmarks of interest within the imaging data. To invoke this control go to `Tools` -> `Landmark Editor`. By default, if no image data is loaded in the viewer, the Landmark Editor tools will be empty. The Landmark Editor tool has the following functionality:
+
+* `Current Set` - The Landmark Editor allows for up to five different sets of points to be recorded, each labeled `Point Set 1`,...,`Point Set 5`
+* `Sets to Display` - Selects which Point Set to display in the viewer. Choices are: (i) `Current` to display the currently selected Point Set (default), (ii) `All` to display all Point Sets, and (iii) `None` to display no landmarks.
+* `Enable Mouse` - Toggle to enable placement or editing of landmarks using the mouse.
+
+The `Current Landmark Options` operate on the currently selected Point Set in `Current Set`:
+* `Landmark` - Selects the currently 'active' landmark from the drop down list of landmarks, if any. Selecting a landmark centers the image viewer crosshairs on the currently selected landmark.
+* `Pick`/`Release` - The `Pick` button allows for editing landmark locations. If the `Enable Mouse` toggle is checked, pressing the `Pick` button will allow the landmark to be moved (a circle will appear around the landmark to indicate that it can be moved).  The `Release` button will appear to discontinue landmark location editing. 
+* `Undo` - Undo the last landmark operation.
+* `Redo` - Redo the previous landmark operation.
+* `Delete` - Deletes the currently selected landmark in `Landmark`.
+* `Rename` - Renames the currently selected landmark in `Landmark`.
+* `Delete All` - Delete all landmarks in the current Point Set `Current Set`.
+* `Display Properties` - Select the color of the Point Set in `Current Set`.
+* `Load` - Load a previously saved set of landmarks.
+* `Save` - Save the set of all landmarks. This will save all landmark Point Sets and their properties.
+
 
 
