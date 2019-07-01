@@ -114,33 +114,33 @@ We will have to create an Identity Pool associated with BioImageSuite for you. O
             {
                 "Effect": "Allow",
                 "Principal": {
-                    "AWS": "arn:aws:iam::<ACCOUNT_ID>:role/<COGNITO_IDENTITY_POOL_AUTH_ROLE>"
+                    "AWS": "arn:aws:iam::[123456789012]:role/[Cognito_biswebtestidentitypoolAuth_Role]"
                 },
                 "Action": "s3:ListBucket",
-                "Resource": "arn:aws:s3:::<S3_BUCKET_NAME>"
+                "Resource": "arn:aws:s3:::[bisweb-test]"
             },
             {
                 "Effect": "Allow",
                 "Principal": {
-                    "AWS": "arn:aws:iam::<ACCOUNT_ID>:role/<COGNITO_IDENTITY_POOL_AUTH_ROLE>"
+                    "AWS": "arn:aws:iam::[123456789012]:role/[Cognito_biswebtestidentitypoolAuth_Role]"
                 },
                 "Action": [
                     "s3:GetObject",
                     "s3:PutObject",
                     "s3:DeleteObject"
                 ],
-                "Resource": "arn:aws:s3:::<S3_BUCKET_NAME>/*"
+                "Resource": "arn:aws:s3:::[bisweb-test]/*"
             }
         ]
     }
 
-The parts of the policy surrounded by carats will need to be replaced by values relevant to your bucket and values specific to the BioImageSuite User Pools that cannot be published here. 
+The parts of the policy surrounded by brackets are sample values, and will need to be replaced by values relevant to your bucket and values specific to the BioImageSuite User Pools that cannot be published here. 
 
-* <ACCOUNT_ID> designates your Account Id. See [Appendix B](#appendix_b) for more information.
+* [123456789012] designates your Account Id. See [Appendix B](#appendix_b) for more information.
 
-* <COGNITO_IDENTITY_POOL_AUTH_ROLE> designates the name of the authentication role that will be created along with your identity pool. See [the section about identity pools](#identity-pool) for more information.
+* [Cognito_biswebtestidentitypoolAuth_Role] designates the name of the authentication role that will be created along with your identity pool. See [the section about identity pools](#identity-pool) for more information.
 
-* <S3_BUCKET_NAME> designates the name of your S3 bucket.
+* [bisweb-test] designates the name of the S3 bucket whose policy you are currently changing.
 
 More information about what setting a Bucket Policy can do can be found in the [official S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html).
 
