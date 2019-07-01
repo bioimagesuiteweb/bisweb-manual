@@ -35,12 +35,24 @@ _Figure 2: The Amazon Cognito main menu._
 Step through the options of creating your User Pool. These are fairly self-explanatory and most don't matter for the purposes of BioImage Suite; however, one option must be configured — the App clients.
 
 ### The App Client 
-Once you are at the App client screen, click 'Add an app client' and fill out a name for your App client. You may change the other options for your app client if you would like, but BioImage Suite is designed to run with the defaults — be careful not to check 'Only allow Custom Authentication' in particular! Once you are finished, select 'Create app client'.
+Once you are at the App client screen, click 'Add an app client' and fill out a name for your App client. Step through the remaining options, setting those that you'd like, then once at the 'Review' screen, click 'Create pool'. 
+    
+
+You may change the other options for your app client if you would like, but BioImage Suite is designed to run with the defaults — be careful not to check 'Only allow Custom Authentication' in particular! Once you are finished, select 'Create app client'.
 
 ![](./AWSBucketsImages/AWSAppClientInput.png)
 _Figure 3: The app client input screen that will appear once you click 'Add an app client'._
 
 Once you are finished configuring your User Pool's settings, you will be shown a screen that will let you review your choices. If you are satisfied, click 'Create pool'. This will return you to the main User Pool screen. 
+
+Next, go to 'App client settings' and click the following check buttons: 
+
+* 'Cognito User Pool' under 'Enabled identity providers'
+* 'Authorization code grant' and 'Implicit grant under 'Allowed OAuth flows'
+* 'email' and 'openid' under 'Allowed OAuth Scopes'. 
+
+![](./AWSBucketsImages/AWSOAuthPermissions.png)
+_Figure 3.5: The OAuth settings required to make BioImage Suite compatible with AWS_
 
 There is one more step required to configure the App client. Find the pool you just created in the main User Pool screen and select its tile. Find 'App client settings' in the sidebar and fill out the 'Callback URL(s)' field under 'Sign in and sign out URLs' with the following line: 
 
@@ -178,6 +190,7 @@ Once these steps are complete your bucket may be accessed through the AWS Bucket
 ![](./AWSBucketsImages/AWSSelector.png)
 _Figure 13: The BioImageSuite AWS Bucket selector, accessible through Help->AWS Selector_
 
+TODO: Add app web domain!
 
 ## Appendices
 
